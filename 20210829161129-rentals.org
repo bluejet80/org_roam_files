@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       f1b645e1-a7f3-4556-9c8e-6a49339549c3
 :END:
@@ -6,3 +7,13 @@
 Stuff having to do with the rentals
 
 
+=======
+:PROPERTIES:
+:ID:       f1b645e1-a7f3-4556-9c8e-6a49339549c3
+:END:
+#+title: Rentals
+
+Stuff having to do with the rentals
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       3d8f6025-e1fb-4ea3-8068-420faa67fde5
 :END:
@@ -6,3 +7,13 @@
 Thing having to do with glass blowing
 
 
+=======
+:PROPERTIES:
+:ID:       3d8f6025-e1fb-4ea3-8068-420faa67fde5
+:END:
+#+title: Hot Glass
+
+Thing having to do with glass blowing
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

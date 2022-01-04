@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       d3e7bdf2-563e-4e92-9ea9-d7657ada4e31
 :END:
@@ -6,3 +7,13 @@
 This is the place for everything related to Bookbinding
 
 
+=======
+:PROPERTIES:
+:ID:       d3e7bdf2-563e-4e92-9ea9-d7657ada4e31
+:END:
+#+title: Bookbinding
+
+This is the place for everything related to Bookbinding
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

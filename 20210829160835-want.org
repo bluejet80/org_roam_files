@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       7c319015-cbf6-4785-a0cc-e3ca8b6b3de0
 :END:
@@ -6,3 +7,13 @@
 Stuff I want
 
 
+=======
+:PROPERTIES:
+:ID:       7c319015-cbf6-4785-a0cc-e3ca8b6b3de0
+:END:
+#+title: Want
+
+Stuff I want
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

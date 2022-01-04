@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       202abefd-2a95-45b6-976b-84fd1c733e07
 :END:
@@ -5,3 +6,12 @@
 
 This is the place for everything having to do with MakeICT
 
+=======
+:PROPERTIES:
+:ID:       202abefd-2a95-45b6-976b-84fd1c733e07
+:END:
+#+title: MakeICT
+
+This is the place for everything having to do with MakeICT
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

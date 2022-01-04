@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       9ad72673-d53e-437f-8420-1d94b361f668
 :END:
@@ -6,3 +7,13 @@
 This is the place for everything Ableton Live related
 
 
+=======
+:PROPERTIES:
+:ID:       9ad72673-d53e-437f-8420-1d94b361f668
+:END:
+#+title: Ableton
+
+This is the place for everything Ableton Live related
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       ed826ad5-fa50-44f4-ab29-54dd88f6f19a
 :END:
@@ -5,3 +6,12 @@
 
 This is for info on Economics and such
 
+=======
+:PROPERTIES:
+:ID:       ed826ad5-fa50-44f4-ab29-54dd88f6f19a
+:END:
+#+title: Economy
+
+This is for info on Economics and such
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

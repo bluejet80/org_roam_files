@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       3d0fdbde-fa5f-40ed-8300-3b8385eef791
 :END:
@@ -323,3 +324,1076 @@ print(guess, 'is close to the cube root of', cube)
   
   
 
+=======
+:PROPERTIES:
+:ID:       3d0fdbde-fa5f-40ed-8300-3b8385eef791
+:END:
+#+title: MIT CourseWare
+#+date: [2021-09-11 Sat 11:28]
+
+The files associated with this are in the folder
+
+C:\home\.spyder-py3\mit_lecture
+
+
+* Important information
+  
+** Block commenting in Spyder
+   Single line Comment C-1
+   Multi-line comment C-4
+   Unblock Multi-line Comment C-5
+   
+** Load a program into the Python environment
+
+   
+** Table of contents
+   
+*** Lecture 5 Tuplets, lists, Aliasing, mutability
+    Link to video
+    [[https://www.youtube.com/watch?v=RvRKT-jXvko&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=17][Lecture 5 Video]]
+
+*** Lecture 6 Recursion and Dictionaries
+    Link to Video
+    [[https://www.youtube.com/watch?v=WPSeyjX1-4s&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=22][Lecture 6 Video]]
+
+*** Lecture 7 Testing, Debugging, Exceptions
+    Link to Video
+    [[https://www.youtube.com/watch?v=9H6muyZjms0&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=23][Lecture 7 Video]]
+
+*** Lecture 8 Object Oriented Programming
+    Link to Video
+    [[https://www.youtube.com/watch?v=-DP1i2ZU9gk][Lecture 8 Video]]
+
+*** Lecture 9 Python Classes and Inheritence
+    Link to Video
+    [[https://www.youtube.com/watch?v=FlGjISF3l78&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=33][Lecture 9 Video]]
+
+*** Lecture 10 Understanding Program Efficiency
+    Link to Video
+    [[https://www.youtube.com/watch?v=o9nW0uBqvEo&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=36][Lecture 10 Video]]
+
+*** Lecture 11 Understanding Program Eff. Part2
+    Link to Video
+    [[https://www.youtube.com/watch?v=7lQXYl_L28w&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=37][Lecture 11 Video]]
+
+*** Lecture 12 Searching and Sorting
+    Link to Video
+    [[https://www.youtube.com/watch?v=6LOwPhPDwVc&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=38][Lecture 12 Video]]
+** 
+
+* Lecture 1 and 2
+
+#+begin_src python
+  
+  print (3 + 4)
+  print ("Harry was" + (" Here!")*3) #Here! is repeated 3 times
+  
+  x = 24537
+  x_str = str(x) # convert int to string
+  print("my fav num is", x,".", "x =", x) #print int with commas
+  print("my fav num is " + x_str +". "+"x = "+ x_str)# print string w +
+  
+  text = input("Type anything...") # user input string
+  print((text + " ")*5)
+  
+  num = int(input("Type a number...")) # user input int
+  print(5*num)
+  
+  import random             # random number between 20-400
+  random.randint(20, 400)
+  
+  n = 0                 # while and for loops
+  while n < 5:
+      print(n)
+      n = n + 1
+  
+  # same as
+  
+  for n in range(5):  # range(start,stop,step)  
+      print(n)
+  
+ 
+#+end_src
+
+* Lecture 3
+
+** Doin stuff with Strings
+
+#+begin_src python
+  
+  s = "abcdefgh"
+  print(len(s)) 
+  
+  ## String Slices
+  print(s[2])
+  print(s[-2]) #negative indexing
+  print(s[2:6]) #slicing [start:stop:step]  stop-1
+  print(s[::-1]) #prints string in reverse
+  print(s[4:1:-2])
+  
+  
+  ## Strings in Python are immutable
+  
+  r = "hello"
+  print(r)
+  r = 'y' + r[1:len(r)] #prints yello
+  print(r)
+  r = 'j' + r[3:len(r)]
+  print(r)
+  r = "Fabulous"
+  r = r[:3] + 'g' + r[3:len(r)] #changing the characters of the string
+  print(r)
+  
+#+end_src
+
+** basic for loop
+
+#+begin_src python
+  
+  s = "abcedfghi"  # for loops
+  
+  for char in s: 
+      if char == 'i' or char == 'u':
+	  print("There is an i or u")
+  
+#+end_src
+
+** Program: Robot Cheers
+
+#+begin_src python
+  
+      an_letters = "aefhilmnorsxAEFHILMNORSX"
+      word = input("I will cheer for you! Enter a word: ")
+      times = int(input("Enthusiasm level (1-10): "))
+  
+    #  i = 0 
+    #  while i < len(word): #This whole block can be replaced with...
+    #      char = word[i]
+  
+    for char in word:
+  
+	  if char in an_letters:
+	      print("Give me an " + char + "! " + char)
+	  else:
+	      print("Give me a " + char + "! " + char)
+  
+  #	i += 1   # incrementation is now unnecessary
+  
+    print("What does that spell?")
+      for i in range(times):
+	  print(word, "!!!")
+  
+#+end_src
+
+    
+** Algorithms
+   All these algorithms will be used to compute the cube root
+
+*** Guess and Check
+    Will only give answer to perfect cubes
+
+    Process:
+    1. get a number from the user
+    2. Use guesses to see if you can incremently obtain the
+       cube root of the number
+    3. Add support for negative numbers
+    4. If number is not a perfect cube, tell user
+    5. print output with support for negative numbers
+       
+
+#+begin_src python
+  
+cube = int(input("Give me a number: "))
+for guess in range(abs(cube) + 1):
+    if guess**3 >= abs(cube):
+        break
+if guess**3 != abs(cube):
+    print(cube, 'is not a perfect cube')
+else:
+     if cube < 0:
+         guess = -guess
+print('The cube root of', cube ,'is', guess)
+  
+#+end_src
+
+**** Bonus Exercise: Get a list of perfect cubes
+
+#+begin_src python
+for num in range(50):
+    num = num**3
+    print(num)
+#+end_src
+
+This prints the perfect cubes from 0-50
+
+0
+1
+8
+27
+64
+125
+216
+343
+512
+729
+1000
+1331
+1728
+2197
+2744
+3375
+4096
+4913
+5832
+6859
+8000
+9261
+10648
+12167
+13824
+15625
+17576
+19683
+21952
+24389
+27000
+29791
+32768
+35937
+39304
+42875
+46656
+50653
+54872
+59319
+64000
+68921
+74088
+79507
+85184
+91125
+97336
+103823
+110592
+117649
+    
+
+*** Approximation
+    Will give approximate solutions to non perfect cubes.
+
+    Process:
+    1. Start with a guess and then increment that guess by a small value
+
+
+#+begin_src python
+
+cube = int(input("Give me a number: "))
+epsilon = 0.01
+guess = 0.0
+increment = 0.001
+num_guesses = 0
+
+while abs(guess**3 - cube) >= epsilon and guess <= cube:
+    guess += increment
+    num_guesses += 1
+print('Number of guesses =', num_guesses)
+if abs(guess**3 - cube) >= epsilon:
+    print('Failed on cube root of', cube)
+else:
+    print(guess, 'is close to the cube root of', cube)
+
+#+end_src
+
+    
+
+*** BiSection Search
+    The process used to find the cube root here is as follows
+    1. gets a high and low boundary
+       this is determined by 0 on the bottom and the number recieved
+       from the user input as the top value.
+    2. the program finds the average of the two numbers and sets that as
+       the guess and then evaluates if the cube of the guess is higher or
+       lower than the initial value of the user input.
+    3. If it is higher, than that guess is set as the high value
+       and if it is lower, the guess is set to the low value
+    4. the program then again averages the two numbers and also
+       increments the num_guesses variable.
+    5. It keeps doing this until it lands on a guess whose cubed value is
+       equal to the initial value and then it exits.
+       
+Here is the code
+
+#+begin_src python
+  
+cube = int(input("Give me a number: "))
+epsilon = 0.01
+num_guesses = 0
+low = 0 
+high = cube
+guess = (high + low)/2.0
+while abs(guess**3 - cube) >= epsilon:
+    if guess**3 < cube :
+        low = guess
+    else:
+        high = guess
+    guess = (high + low)/2.0
+    num_guesses += 1
+print('num_guesses =', num_guesses)
+print(guess, 'is close to the cube root of', cube)  
+  
+  
+#+end_src
+
+* Lecture 4
+
+  Link to Video
+  [[https://www.youtube.com/watch?v=MjbuarJ7SE0&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=14][Lecture 4 Video]]
+
+* Lecture 5
+    Tuplets, lists, Aliasing, mutability
+    Link to video
+    [[https://www.youtube.com/watch?v=RvRKT-jXvko&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=17][Lecture 5 Video]]
+  
+** Tuples
+#+begin_src python
+  
+  def get_data(aTuple):
+    nums = ()
+    words = ()
+    for t in aTuple:
+        nums = nums + (t[0],)
+        if t[1] not in words:
+            words = words + (t[1],)
+    min_n = min(nums)
+    max_n = max(nums)
+    unique_words = len(words)
+    return (min_n, max_n, unique_words)
+
+tswift = ((2014,"Katy"),
+          (2014,"Harry"),
+          (2012,"Jake"),
+          (2010,"Jimmy"),
+          (2008,"Roger"))
+          
+
+(min_year, max_year, num_people) = get_data(tswift)
+print("From", min_year, "to", max_year, \
+      "Taylor Swift wrote songs about", num_people)
+  
+#+end_src
+
+This prints out the following:
+From 2008 to 2014 Taylor Swift wrote songs about 5
+
+*** Lets check out the areas of this function
+    1. The first thing that the function does is create two
+       new empty tuples, one called nums the other called words.
+
+    2. Then the for loop iterates over all the elements of the tuple
+       that was passed to the function.
+       The first time through the loop t will equal the first tuple
+       object, the second time through the loop t will equal the
+       second tuple object and so on..
+
+       Each time through the loop the first element of the tuple object
+       will be added to nums.
+       Then if the second object is not already in words, it is added to
+       the words tuple.
+
+    3. Then after it has iterated through the tuple objects it assigns
+       the minimum number in the nums tuple to min_n, and
+       the maximum number in the nums tuple to max_n, and
+       sets the value of the length of the words tuple to unique_words. 
+
+    4. Then it returns the values of min_n, max_n, unique_words.
+
+
+    
+    
+** Lists
+
+
+*** Converting a list to a string, and a string to a list
+
+#+begin_src python
+  
+  r = "Vodka for Dog People"
+  n = r.split(" ")
+  t = []
+  t.append(n[2] + "s")
+  t.append(n[1])
+  t.append(n[0])
+  t.append(n[3])
+  
+  m =' '.join(t)
+  print(r)
+  print(m)
+    
+#+end_src
+
+This prints the folowing:
+Vodka for Dog People
+Dogs for Vodka People
+
+*** Cloning a list
+
+    You clone a list by typing:
+#+begin_src python
+  
+  cool = ['blue','green','grey']
+  chill = cool[:]
+  chill.append('black')
+  print(chill)
+  print(cool)
+  
+#+end_src
+
+   In this example cool and chill become two different lists
+
+   
+*** Lists of Lists
+
+#+begin_src python
+  
+  warm = ['yellow','orange']
+  hot = ['red']
+  brightcolors = [warm]
+  brightcolors.append(hot)
+  print(brightcolors)
+  hot.append('pink')
+  print(hot)
+  print(brightcolors)
+  
+#+end_src
+
+  In this example we are creating a list of lists and then modifying one
+  of the lists inside that list and therefore changing that list aswell.
+
+
+  
+*** Avoid mutating a list as you are iterating over it
+
+#+begin_src python
+  
+  def remove_dups(L1, L2):
+      for e in L1:
+	  if e in L2:
+	      L1.remove(e)  # modifying a list you are
+	                    # iterating over, wrong!
+  
+  
+  def remove_dups(L1, L2):
+      L1_copy = L1[:]      #make copy of L1 to iterate over
+      for e in L1_copy:
+	  if e in L2:
+	      L1.remove(e)
+  
+#+end_src
+
+* Lecture 6
+  Recursion and Dictionaries
+    Link to Video
+    [[https://www.youtube.com/watch?v=WPSeyjX1-4s&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=22][Lecture 6 Video]]
+
+  
+** Iteration
+
+   Multiplying a value using iteration
+
+#+begin_src python
+  
+  def mult_iter(a, b):
+      result = 0         # start with the result as 0
+      while b > 0:       # as long as b is greater than zero
+	  result += a    # add a to the result
+	  b -= 1         # subtract 1 from b
+      return result
+  
+#+end_src
+
+  
+** Recursion
+
+   With recusion you are always trying to simplify the problem
+   down until you reach a base case.
+
+   The first step to moving a stack n pieces high, is to move
+   a stack n-1 pieces high. (the first step in multiplying a * b
+   is adding  a + (a * b - 1)) simplifying the problem, removing
+   one iteration. And then you apply the same rule
+   to the n-1 stack and move a stack n-2 and so on until you
+   reach you base case in which you take n - a number and you
+   are left with 1 or zero. When you have reached this you have
+   reached your base case. 
+
+   Lets look at this same problem another way:
+
+   a * b = a + (a * (b - 1))
+   a * b = a + a + (a * (b - 2))
+
+   we keep doing this until we reach our base case
+   when b = 1, a * b = a
+
+
+#+begin_src python
+  
+  def mult(a, b):
+      if b == 1:
+	  return a
+      else:
+	  return a + mult(a, b-1)
+  
+#+end_src
+
+
+  Now for this example we will use recusion to calculate the
+  factorial of a number.
+
+#+begin_src python
+  
+  def factorial(n):     # recursion
+      if n == 1:
+	  return 1
+      else:
+	  return n*factorial(n-1)
+  
+  def factorial_iter(n):   # iterative
+      prod = 1
+      for i in range(1,n+1):
+	  prod *= i
+      return prod
+  
+  
+#+end_src
+
+
+  Now lets look at solving the Towers of Hannoi
+
+
+#+begin_src python
+  
+  def printMove(fr, to):
+    print('move from ' + str(fr) + " to " + str(to))
+    
+    
+  def Towers(n, fr, to , spare):
+    if n == 1:
+        printMove(fr, to)
+    else:
+        Towers(n-1, fr, spare, to)
+        Towers(1, fr, to, spare)
+        Towers(n-1, spare, to, fr)
+        
+Towers(4, "fr", "to", "spare")
+  
+#+end_src
+
+
+   Now lets look at the Fibonacci Seq:
+
+   the example that they use is the rabbits, which
+   take two months to have offspring and which also
+   never die off. So there are two base cases, first
+   one is n-2, and the second is n-1
+
+#+begin_src python
+  
+  def fib(x):
+    """assumes x an int >= 0
+    returns Fibonacci of x"""
+    
+    if  x == 0 or x == 1:
+        return 1
+    else:
+        return fib(x-1) + fib(x-2)
+    
+print(fib(9))
+  
+#+end_src
+
+
+
+
+   Now we will use recusion to find pallendromes
+
+#+begin_src python
+  
+    def isPalindrome(s):
+  
+      def toChars(s):
+	  s = s.lower()
+	  ans = ''
+	  for c in s:
+	      if c in 'abcdefghijklmnopqrstuvwxyz':
+		  ans = ans + c
+	  return ans
+      def isPal(s):
+	  if len(s) <= 1:
+	      return True
+	  else:
+	      return s[0] == s[-1] and isPal(s[1:-1]) # this is the recursive part of
+	                                              # this problem
+  
+      return isPal(toChars(s))
+  
+  
+  m = "for the love vole htr of"
+  print(isPalindrome(m))
+  
+  
+#+end_src
+
+
+    The s[1:-1] returns a list with the first and last elements
+    removed.
+
+
+    
+** Dictionaries
+
+   First we will talk about how you can store information
+   using lists. And you keep the information that corresponds
+   with itself at the same index in each list.
+   Each list will have the same length.
+   For example
+
+#+begin_src python
+  
+  names = ['Ana','John','Denise','Mark']
+  grade = ['A','B','A-','C']
+  course = [2.00, 6.0001, 20.002, 9.01]
+  
+  # to retrieve the information we use the index method
+  
+  def get_grade(student, name_list, grade_list, course_list):
+  
+      i = name_list.index(student)
+  
+      grade = grade_list[i]
+      course = course_list[i]
+  
+      return (course, grade)
+  
+#+end_src
+
+   This is one way that you can do this, but its kinda messy.
+   Another way we can store this data is with a dictionary
+
+#+begin_src python
+  
+  my_dic = {}  # creating an empty dictionary
+  
+  grades = {'Ana':'A', 'Mike':'C', 'John':'B+', 'Sarah':'A'}
+  
+#+end_src
+
+   Now if we want to get Ana's grade we just run grades['Ana'],
+   and it will return the value, which would be the string 'A'.
+
+   To Add another entry into the dictionary you woould just type:
+   grades['Sylvan'] = 'B'   and that entry would be added to grades.
+
+   To remove an entry we would just type del(grades['John'])
+
+   To Test to see if a key exists we type 'Mike' in grades , this
+   will return true or false.
+
+   To get all the keys just type grades.keys()
+   to get all the values type grades.values()
+   Each of these returns a list which then can be manipulated as well
+
+   The values can be anything. But the keys need to be unique and immutable.
+
+   
+
+   
+*** Example Code
+
+    To illustrate the various things you can do with dictionaries
+    we are gonna analyze some song lyrics.
+
+    We are gonna write a set of procedures that record the frequecy of
+    words in song lyrics. So we will match strings to integers.
+
+    Then we will ask which words occur most often? And how many times?
+    Then we will let a user decide, they want to see all the words that
+    appear over a certain amount of times.
+
+#+begin_src python
+  
+  ## First setup the dictionary
+  
+  def lyrics_to_frequencies(lyrics):
+      myDict = {}
+      for word in lyrics:
+	  if word in myDict:
+	      myDict[word] += 1
+	  else:
+	      myDict[word] = 1
+      return myDict
+  
+  ## Find the most common words
+  
+  def most_common_words(freqs):
+      values = freqs.values()
+      best = max(values)
+      words = []
+      for k in freqs:
+	  if freqs[k] == best:
+	      words.append(k)
+      return (words, best)
+  
+  ## See how often the words appear
+  
+  def words_often(freqs, minTimes):
+      result = []
+      done = False
+      while not done:
+	  temp = most_common_words(freqs)
+	  if temp[1] >= minTimes:
+	      result.append(temp)
+	      for w in temp[0]:
+		  del(freqs[w])
+	  else:
+	      done = True
+  
+      return result
+  
+#+end_src
+
+    For this to work 'lyrics' needs to be a list of words, then
+    the output of that first function needs to be assigned to a
+    variable which will be the dictionary.
+
+    Anf the last function might be called as such:
+    print(words_often(beatles, 5))
+
+    
+   
+** Memoize the Fibonacci
+
+   Now we are going to do something that will make the
+   procedure for finding the nth value of the fibonacci
+   sequence much more efficient, using dictionaries.
+
+#+begin_src python
+  
+  def fib_efficient(n, d):
+      if n in d:
+	  return d[n]
+      else:
+	  ans = fib_efficient(n-1, d) + fib_efficient(n-2, d)
+	  d[n] = ans
+	  return ans
+  d = {1:1, 2:2}
+  print(fib_efficient(6, d))
+  
+#+end_src
+
+
+
+   
+* Lecture 7
+  Testing, Debugging, Exceptions
+    Link to Video
+    [[https://www.youtube.com/watch?v=9H6muyZjms0&list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA&index=23][Lecture 7 Video]]
+
+    
+
+    
+** Defensive Programming attitude
+
+   - Write specifications for functions
+   - Modularize Programs (write as many functions as you can)
+   - Check conditions on inputs and outputs(assertions)
+
+*** Testing and Validation
+
+    - Compare Input and Output pairs to specifications(test cases)
+    - It's not working
+    - How can I break my program?
+
+*** Debugging
+
+    - Study events leading up to an error
+    - Why is it not working?
+    - How can I fix my program?
+
+*** Three types of tests
+
+    This is a cycle where you begin on unit testing and then move
+    to regression testing and if you encounter problems you must
+    go back to unit testing. Then later you do Integration testing
+    where you put all the pieces together and then if you incur
+    problems you may have to go back to unit testing or regression
+    testing. 
+    
+**** Unit testing
+     - validate each piece of the program
+     - testing each function separately
+
+**** Regression testing
+     - add test for bugs as you find them
+     - catch reintroduced errors that were previously fixed
+
+**** Integration Testing
+     - does the overall program work?
+     - tend to rush to do this
+
+*** Testing Approaches
+    
+**** Determine some natural boundaries for the program.
+     -what is the smallest number, what should work, and now
+     hat doesn't work.
+     -If there are no natural boundaries then maybe need
+     to do random testing of inputs. 
+
+**** Black Box Testing
+     -assuming you have the specifications of the function, you
+     have the doc-string, use that information to do your testing
+
+***** Example
+
+#+begin_src python
+  
+  def sqrt(x, eps):
+      """ Assumes x , esp floats, x >= 0, esp > 0
+          Returns res such that x-eps <= res*res <= x+eps """
+  
+#+end_src
+
+      Your test cases are designed without looking at the code. So
+      no matter how the actual code is implemented your test cases
+      will be the same.
+
+      This type of testing can be reused even if implementation changes
+      because it was never based on the implementation.
+
+      This type of testing uses paths through specification.
+      
+****** Sample Set
+
+       |------------------------+---------------+---------------|
+       | Case                   |             X | EPS           |
+       |------------------------+---------------+---------------|
+       | boundary               |             0 | 0.0001        |
+       | perfect square         |            25 | 0.0001        |
+       | less than 1            |          0.05 | 0.0001        |
+       | irrational square root |             2 | 0.0001        |
+       | extremes               |             2 | 1.0/2.0**64.0 |
+       | extremes               | 1.0/2.0**64.0 | 1.0/2.0**64.0 |
+       | extremes               |     2.0**64.0 | 1.0/2.0**64.0 |
+       | extremes               | 1.0/2.0**64.0 | 2.0**64.0     |
+       | extremes               |     2.0**64.0 | 2.0**64.0     |
+       |                        |               |               |
+       |------------------------+---------------+---------------|
+ 
+
+**** Glass Box Testing
+     -You are looking at the code itself and you try to determine
+     some test cases that explore all avenues through the code that
+     are possible.
+
+     -Its called 'Path-Complete' if every potential path through
+     code is tested at least once.
+
+     -What are some drawbacks of this type of testing?
+     -- can go through loops arbirarily many times
+     -- missing paths
+
+     -Guidelines
+     -- Branches - Exercise all parts of a conditioanl
+     -- For Loops - Loop not entered, or body of loop executed only once
+     or body of loop executed several times.
+     -- while loops - Same as for loops, cases that catch all ways to exit
+     loop. 
+
+** Know what tools are available to you
+   
+   
+*** Be Systematic with your debugging
+    How did I get the unexpected result?
+    Explain how the program works to someone who is clueless.
+    Write the program one function at a time, debug the function,
+    then move on. 
+
+*** Use Print statements
+    Use print spatem
+
+*** Use the Bisection method in debugging
+    Split the program in half and make sure the first half is working
+    properly, if it is move on to the latter half. 
+
+*** Error messages(easy)
+
+*** Logic Errors(hard)
+    
+** Exceptions
+   error messages are exceptions
+   You can setup handlers for exceptions
+   
+#+begin_src python
+  
+  try:
+      a = int(input("Tell me one number:"))
+      b = int(input("Tell me another number:"))
+      print(a/b)
+  except:
+      print("Bug in user input.")
+    
+#+end_src
+
+   If you know that a piece of code might give you an error then you
+   can put those lines of code within the try: block. If none of
+   the lines of code prodece an error then everything runs as usual.
+   But if there is an error then it prints the except statement.
+
+   You can have several exceptions setup for your code.
+
+#+begin_src python
+  
+  try:
+      a = int(input("Tell me one number:"))
+      b = int(input("Tell me another number:"))
+      print("a/b =", a/b)
+      print("a+b =", a+b)
+  except ValueError:
+      print("Could not convert to a number.")
+  except ZeroDivisionError:
+      print("can't Divide by Zero.")
+  except:
+      print("Something went very wrong.")
+  
+#+end_src
+
+   You can also have an Else: Block which will run even if there
+   are no errors in the Try Block.
+
+   There is also the Finnally: Block which always gets executed
+   after all the others run, even if no errors were encountered.
+   Useful to clean up code, run a sequence that should always
+   get run no matter what, Ex. Close a file.
+
+   What else can be done with exceptions. 
+   - you can just fail silently, not a good idea
+   - if you have a function that fails, you could return an
+     error value. Not a good idea
+   - signal an error condition: This is how you create control
+     flow within the system. This stops execution and is
+     coded as such: raise Exception("descriptive string")
+     This is done pretty often.
+
+*** Example
+    Most commonly used: Raise ValueError
+
+#+begin_src python
+  
+  def get_ratios(L1, L2):
+      """ Assumes: L1 and L2 are lists of equal length of 
+	  numbers. 
+	  Returns: a list containing L1[i]/L2[i] """
+      ratios = []
+      for index in range(len(L1)):
+	  try:
+	      ratios.append(L1[index]/L2[index])
+	  except ZeroDivisionError:
+	      ratios.append(float('nan')) #nan = not a number
+	  except:
+	      raise ValueError('get_ratios called with bad arg')
+      return ratios
+  
+#+end_src
+
+   
+** Assertions
+   Assertions are a good example of defensive programming, in that you
+   have assert statements at the beginning or at the end of the function.
+   Assert statements are used to make sure that the assumptions on the
+   computations are exactly what the function expects them to be.
+
+   Here is an Example:
+
+#+begin_src python
+  
+  def avg(grades):
+      assert not len(grades) == 0, 'no grades data'
+      return sum(grades)/len(grades)
+  
+#+end_src
+
+  If the assert fails then the function terminates. This is good to
+  give you an idea of where the bug happened in the program.
+
+
+
+  
+* Lecture 8
+
+  Object Oriented Programming
+    Link to Video
+    [[https://www.youtube.com/watch?v=-DP1i2ZU9gk][Lecture 8 Video]]
+
+
+    
+** Lets start defining our own types
+   What we will be defining first is a coordinate object.
+   This object will represent a point on a coordinate plane.
+   It will consist of a x value and a y value. 
+
+
+#+begin_src python
+  
+  class Coordiante(object):
+      def __init__(self, x, y):
+	  self.x = x
+	  self.y = y
+  
+      def distance(self, other):
+	  x_diff_sq = (self.x-other.x)**2
+	  y_diff_sq = (self.y-other.y)**2
+	  return (x_diff_sq + y_diff_sq)**0.5
+  
+      def __str__(self):
+	  return "<"+str(self.x)+","+str(self.y)+">"
+      
+  
+#+end_src
+
+** Fraction Object
+
+#+begin_src python
+  
+  class Fraction(object):
+      """
+      A number represented as a fraction
+      """
+      def __init__(self,num, denom):
+	  """ num and denom are integers """
+	  assert type(num) == int and type(denom) == int, "ints not used"
+	  self.num = num
+	  self.denom = denom
+      def __str__(self):
+	  """ Returns a string representation of object """
+	  return str(self.num) + "/" + str(self.denom)
+      def __add__(self, other):
+	  """ Returns a new fraction representing the addition of
+	      two fractions """
+	  top = self.num*other.denom + self.denom*other.num
+	  bott = self.denom*other.denom
+	  return Fraction(top, bott)
+      def __sub__(self, other):
+	  """ Returns a new fraction representing the subtraction 
+	      of two fractions """
+	  top = self.num*other.denom - self.denom*other.num
+	  bott = self.denom*other.denom
+	  return Fraction(top, bott)
+      def __float__(self):
+	  """ Returns a float value of the fraction """
+	  return self.num/self.denom
+      def inverse(self):
+	  """ Returns the inverse of the fraction """
+	  return Fraction(self.denom, self.num)
+  
+#+end_src
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

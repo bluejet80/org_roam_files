@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       bfd84885-4666-4dbd-8c9a-c19e52d47391
 :END:
@@ -6,3 +7,13 @@
 Here is the place for stuff on Education
 
 
+=======
+:PROPERTIES:
+:ID:       bfd84885-4666-4dbd-8c9a-c19e52d47391
+:END:
+#+title: Education
+
+Here is the place for stuff on Education
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

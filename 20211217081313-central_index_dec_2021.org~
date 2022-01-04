@@ -1,0 +1,172 @@
+:PROPERTIES:
+:ID:       8c01d956-c9a5-42cf-9e8e-04d476316032
+:END:
+#+title: Central Index Dec 2021
+#+date: [2021-12-17 Fri 08:13]
+
+December 2021 Focus
+
+* #######################
+
+* Lisp
+
+** Practical Common Lisp Book
+
+*** making a testing framework
+    Currently on page 109
+    [[~/lisp_prog/practical_lisp/Chapter9.lisp][chapter 9 file]]
+
+** Weird(Digital Art)
+
+*** Figure out how all that works
+    [[~/lisp_prog/Lisp_repos/weird/README.md][Weird Readme file]]
+    [[~/lisp_prog/Lisp_repos/weird/examples/draw.lisp][Draw Examples]]
+    [[~/lisp_prog/Lisp_repos/weird/examples/ex.lisp][Ex Examples]]
+    
+*** Process for loading the file
+    To load Weird
+    (load "~/lisp_prog/Lisp_repos/weird/weird.asd")
+    To load cl-veq
+    (load "~/lisp_prog/Lisp_repos/cl-veq/veq.asd")
+    
+    
+*** Files
+    [[~/lisp_prog/Lisp_repos/][Weird File Directory]]
+
+** Paul Graham Books
+
+*** On Lisp
+    
+*** ANSI Common Lisp
+    I want to go through this book first because I
+    am still learning all the functionality that lisp
+    has to offer.
+
+    [[~/lisp_prog/ansi_lisp_notes.lisp][ANSI Lisp notes file]]
+
+** Person database
+   [[~/lisp_prog/person1.lisp][Person Database File]]
+   [[~/lisp_prog/
+
+* ###########################
+;
+* GitHub Verson Control
+  
+** I need to make the whole git flow a habit within my work flow.
+   To do this I need to setup, or establish within my mind a logical
+   process that I will go through for each and every project. This
+   doesn't happen only at the beginning but it is a perpetual thing
+   throughout the life of the project, all projects. 
+
+** Git Commands to know
+   [[id:3d7d920c-6a6f-4f3f-8575-7522b7873f95][Git and GitHub]]
+
+** Steps of the Process
+
+*** Step 1
+
+*** Step 2
+
+* ##############################
+
+* Journal Web
+
+** Current Progress
+   
+   |------+---------------------------+----------+-------|
+   | Done | Journal Name              | Date     | Pages |
+   |------+---------------------------+----------+-------|
+   | x    | The Muted Pen             | 11/5/07  |    88 |
+   | x    | The Spring Journal        | 1/9/08   |    89 |
+   | x    | The Grey Journal          | 4/14/08  |    92 |
+   | x    | Ginko Journal             | 10/20/08 |    61 |
+   | x    | Litchfield Journal        | 1/1/09   |   111 |
+   | x    | Bicycle Sculpture Journal | 2/1/10   |   114 |
+   | x    | Owl Journal               | 7/28/11  |   119 |
+   | x    | Fantastique Journal       | 10/29/09 |   173 |
+   | x    | Tree Journal              | 1/25/11  |    62 |
+   | x    | Green Journal             | 8/1/12   |   121 |
+   | x    | Snowprints Journal        | 7/1/10   |    63 |
+   | x    | Jacobs Journal            | 6/7/09   |    98 |
+   | x    | Labyrinth Journal         | 10/20/11 |   116 |
+   | x    | Faded Colors Journal      | 5/17/11  |    45 |
+   | x    | Liberated Fist Journal    | 6/2/12   |   116 |
+   | x    | Energy Journal            | 10/3/12  |   118 |
+   | x    | Black Journal             | 12/15/11 |   193 |
+   | x    | Red Journal               | 2/25/12  |   105 |
+   | x    | Paper Weight Journal      | 10/21/10 |    59 |
+   | x    | Canvas 2 Journal          | 9/24/13  |   238 |
+   | x    | Classical Journal         | 2/8/16   |   213 |
+   | x    | Book of Details           | 5/20/14  |   211 |
+   | x    | Canvas 1 Journal          | 1/6/13   |   292 |
+   | x    | Fractal Journal           | 1/3/17   |   169 |
+   | x    | Stamp Journal             | 6/26/15  |   213 |
+   | x    | ESB Journal               | 7/7/09   |    62 |
+   | x    | Bamboo Journal            | 9/15/15  |   221 |
+   | x    | Black Star Journal        | 3/17/15  |   147 |
+   |      | Blue Ribbon Journal       | 9/12/12  |    51 |
+   |      | Blue Journal              | 11/8/10  |   173 |
+   |      | Sensored Journal          | 7/4/08   |    64 |
+   |      | Seven Journal             | 10/26/17 |   301 |
+   |      | Caduveo Journal           | 11/8/19  |   113 |
+   |      |                           |          |       |
+   |------+---------------------------+----------+-------|
+
+
+   
+** Steps in the Process
+    
+*** Make the New Directory
+    Copy from temp dir and rename to correct name
+
+*** Get the Google docs Index page
+    Go to the google docs index page for that journal and make
+    sure that it is properly formatted
+
+*** Copy the text into the coreect javascript file. 
+
+*** Use the Python Script to create the JSON object within the file
+
+*** Copy the necessary elements from the old javascript file
+    Then change the names of the variables with in the file to match the
+    name of the current journal
+
+*** Rename the main webpage for the journal.
+    Go into the page and change all the names to reflect the current journal.
+    Edit the number of links to match the number necessary for the number of
+    pages included in the present journal.
+
+    Make sure the page is all ready to go before you copy it. 
+    
+*** Copy the main page into all the linked pages necessary
+    
+*** Process the Images in lightroom
+    Export the odd pages first, then run the script to change the file names
+    Copy them into the images directory
+    Export the even pages, then run the script to change the file names
+    Copy them in to the image directory
+
+*** Make sure the right cover image is in the directory
+
+*** Add the link to the Index page for the website
+
+
+    
+* #############################
+  
+* Swift
+
+** I need to continue to go thru the 100 days of Swift videos.
+   Currently I am on 
+
+* Installing Linux on the Samsung Tab A
+  There are videos on this. The Tablet would make a nice
+  compact computer to code on if I could get linux on there. 
+  
+** Inital Steps
+
+
+
+   
+* 
+

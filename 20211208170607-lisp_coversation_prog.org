@@ -1,0 +1,80 @@
+:PROPERTIES:
+:ID:       79e970ed-525e-4ab3-8daf-06b91c3dbb89
+:END:
+#+title: Lisp coversation prog
+#+date: [2021-12-08 Wed 17:06]
+
+This is where the infor for the Conversation program will go.
+
+to get random nubmers you just input (random limit) Limit being a number
+and the random number will be called between 0 and the limit. 
+
+First thing to do is develop the data sets 
+
+* Subject Data Set
+
+** I
+
+*** Action
+    Phrases about action with I as the subject
+
+**** Things I do
+
+***** Sample text
+      I went to the store
+      I got a house loan
+
+**** How I do Things
+
+***** Sample text
+      I applied for the house loan
+      I quickly rode my bike
+
+**** When I do things
+
+*** Description
+    These phrases describe subject I
+
+**** What Am I
+
+**** Parts of what I am
+
+** You
+
+*** Action
+
+**** Things You Do
+
+**** How you do things
+
+**** When you do things
+
+*** Description
+
+**** what are you
+
+**** Parts of what you are
+
+** Things
+
+*** Action
+
+**** Things that things do
+
+**** How things do things
+
+**** When things do things
+
+*** Description
+
+**** What is the thing
+    
+**** Parts of what the thing is
+
+* Place data set
+
+* Punctuations
+
+* Pronoun data set
+
+* 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       35ac13a1-ab72-48fe-83a7-4bd65c3a5cf4
 :END:
@@ -5,3 +6,12 @@
 
 Stuff I need
 
+=======
+:PROPERTIES:
+:ID:       35ac13a1-ab72-48fe-83a7-4bd65c3a5cf4
+:END:
+#+title: Need
+
+Stuff I need
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

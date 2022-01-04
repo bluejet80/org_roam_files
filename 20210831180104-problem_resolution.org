@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       9387f23c-ed56-4ea8-9473-c8f0b3969519
 :END:
@@ -5,3 +6,12 @@
 #+date: [2021-08-31 Tue 18:01]
 
 How to find answers to solve problems
+=======
+:PROPERTIES:
+:ID:       9387f23c-ed56-4ea8-9473-c8f0b3969519
+:END:
+#+title: Problem Resolution
+#+date: [2021-08-31 Tue 18:01]
+
+How to find answers to solve problems
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

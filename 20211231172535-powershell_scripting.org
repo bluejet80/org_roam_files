@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       c6dcf1a0-538f-4677-b036-2e83475c91d7
+:END:
+#+title: Powershell Scripting
+#+date: [2021-12-31 Fri 17:25]
+
+Info on Scripting in PowerShell
+
+* Beginning sample scripts
+
+#+begin_src bash
+
+# PI.ps1
+$PI = 3.1415927
+Write-Host "The value of `$PI is $PI"
+
+$num = 14
+Write-Host "3+14=$($num +3)"
+
+$test = 'whats up'
+Write-Host $test
+
+#+end_src
+
+
+* Powershell profiles
+  
+  |----------------------------+-----------------------------------------------------------------|
+  | Description                | Path                                                            |
+  |----------------------------+-----------------------------------------------------------------|
+  | All users, all hosts       | $PSHOME\Profile.ps1                                             |
+  | All users, current host    | $PSHOME\Microsoft.PowerShell_profiles.ps1                       |
+  | Current User, all hosts    | $Home[My ]Documents\PowerShell\Profile.ps1                      |
+  | Current user, current host | $Home[My ]Documents\PowerShell\Microsoft.PowerShell_profile.ps1 |
+  |----------------------------+-----------------------------------------------------------------|
+
+  $PSHOME points to the installation directory for Powershell
+  $HOME is the current user's home directory
+
+
+* PowerShell Functions
+
+** Create a new file in current dir
+
+   New-Item -Path . -Name "File.ps1" -ItemType "file"
+
+   This will create a new file named File.ps1
+
+   
+** Printing from the command line
+
+     Get-Content -Path C:\home\org_roam_files\20211226223739-thoughts_12_26_21.org | Out-Printer

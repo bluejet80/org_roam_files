@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       9ffbe1d1-d081-43df-93c8-899c46ef50d8
 :END:
 #+title: Program Projects
 
 Here is the area for Programming Projects
+=======
+:PROPERTIES:
+:ID:       9ffbe1d1-d081-43df-93c8-899c46ef50d8
+:END:
+#+title: Program Projects
+
+Here is the area for Programming Projects
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

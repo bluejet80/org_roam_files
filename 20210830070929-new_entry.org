@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       2aa1fa3b-c448-4996-8737-dd521b1731c5
 :END:
@@ -5,3 +6,12 @@
 #+date: [2021-08-30 Mon 07:09]
 
 THis is a new entry
+=======
+:PROPERTIES:
+:ID:       2aa1fa3b-c448-4996-8737-dd521b1731c5
+:END:
+#+title: New Entry
+#+date: [2021-08-30 Mon 07:09]
+
+THis is a new entry
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       dd70a096-cebc-421c-b6fe-e7dfd98302d6
+:END:
+#+title: Journal Website
+#+date: [2021-11-16 Tue 16:32]
+
+Here are notes on the journal website.
+
+* Image files
+
+* Function that creates the nodes
+
+* Function that populates the webpage
+
+* Data files
+
+** File for the journals
+
+*** Tells info on each journal
+    - Name of Journal
+    - Number of pages
+    - Date Written
+    - Indexed
+    - Scanned
+    - 
+
+** file for the pages
+
+* How to update the web folder
+
+** Copy files to the samba share
+   
+/home/bluejet/sambashare/web/website/journal_web
+
+To remove all the files in a directory, including the subfolders
+
+sudo rm -rf *
+
+then to copy the contents of the sambashare dir to the web dir,
+while you are currently in the web dir.
+
+sudo cp -r /path/to/dir * .
+
+Path to web directory
+
+/var/www/html/journal_web
+

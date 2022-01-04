@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       2f8141a2-a3e8-4a36-b04e-37b6776767e1
 :END:
@@ -6,3 +7,13 @@
 Ways to save money and reuse things
 
 
+=======
+:PROPERTIES:
+:ID:       2f8141a2-a3e8-4a36-b04e-37b6776767e1
+:END:
+#+title: Saving Money
+
+Ways to save money and reuse things
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       8a989a06-5a1b-4821-86a2-10b8fc1f1989
 :END:
@@ -5,3 +6,12 @@
 
 Writings about dreams
 
+=======
+:PROPERTIES:
+:ID:       8a989a06-5a1b-4821-86a2-10b8fc1f1989
+:END:
+#+title: Dreams
+
+Writings about dreams
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

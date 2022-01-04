@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       cbda692f-3ca5-4117-afdb-68cbbfce1f2e
+:END:
+#+title: Bash Scripting
+#+date: [2021-12-31 Fri 17:24]
+
+Here is info about scripting in BASH
+
+
+* Bash Scripting example
+
+#+begin_src bash
+  
+  #!/bin/bash
+  
+  # Add two numeric values
+  ((sum=25+35))
+  
+  # Print out the result
+  echo $sum
+  
+  
+#+end_src
+
+* Bash Profile
+  
+  The Profile is in the home directory /c/home
+  the file .bash_profile
+
+  Within this file you setup aliases and stuff like that
+  Links/ Aliases to scripts if you want
+
+  To relaod your profile file run
+
+  . ~/.bash_profile
+
+  
+* Bash Functions
+
+  Comments are created with the #
+
+  Multi-line comments are made with single quotes '
+
+  
+
+  
+

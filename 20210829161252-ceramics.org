@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :PROPERTIES:
 :ID:       ada15eb1-ba57-4106-aa9d-e5a3d4b1f4bb
 :END:
@@ -6,3 +7,13 @@
 Stuff with ceramics
 
 
+=======
+:PROPERTIES:
+:ID:       ada15eb1-ba57-4106-aa9d-e5a3d4b1f4bb
+:END:
+#+title: Ceramics
+
+Stuff with ceramics
+
+
+>>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

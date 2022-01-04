@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       e11db6bb-9cc4-426f-b6c1-c3a9e4290f0b
+:END:
+#+title: Thoughts 12/17/21
+#+date: [2021-12-17 Fri 07:49]
+
+
+Christmas is trying to kill me.
+
+My body aches all over. The things to do are never ending.
+And the fact that people want you to be all happy and cheerful.
+The 'joy' of the holidays just brings out the reality of
+the present situation. The fact that things are in a constant
+state of deterioration.
+
+I did get emacs and lisp working on the Mac Book Pro. Had to use
+closureCl instead of SBCL, but it worked and I'm sure there's
+not that much difference between the two.
+
+I am going to church now, not because I want to necessarily but
+because it helps out other people and makes them happy.
+
+I need to realign my focus once again.
+
+I have been working more on lisp right now and I think it would
+be good to continue it through the end of the year at least. It
+is a good building block for creating a solid foundational
+understaning of programming so that's why I think it should take
+priority at this point.
+
+I am kinda basing my trajectory on the 'task at hand' method.
+I learn something because it is necessary for the current project.
+But I want to make it as my goal to get through all the video
+lectures that I have established so far for the different languages
+that I am learning.
+
+I am done indexing the journals that I have digitized. I am slowly
+making progress on the journal website. At this point its just work
+that needs to be done. I don't have to figure anything else out, just
+have to do what needs to be done for each journal. I am 1/3 of the
+way done at this point.
+
+The scripts I have written in Python so far have just been for the
+purpose of file manipulation.
+
+I have not made very much progress in Java at this point.
+
+Lisp and a general understanding of the theory behind computer
+programming is the focus right now. In particular the Lisp
+Macros and the functionality they add to the process.
+
+At this point I don't think I need any more equipment. I have all the
+things that I need. The only thing is adding a nic to the server and
+making it a gateway of sorts. 
+
+

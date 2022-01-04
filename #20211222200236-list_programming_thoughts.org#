@@ -1,0 +1,212 @@
+:PROPERTIES:
+:ID:       e3022a83-0098-475f-94eb-a8156f3121ad
+:END:
+#+title: List Programming Thoughts
+#+date: [2021-12-22 Wed 20:02]
+
+Some good info:
+
+the command C-c C-q
+will insert as many closing parentheses as needed to mach all currently open ones
+
+When wroking in a file you can compile the file into the lisp environment
+in several different ways. To just recompile the current function you are
+working on you can hit C-c C-c with the coursor anywhere in or immediately after
+your (defun).
+or just use C-c C-k while in the buffere with slime already running. 
+
+
+Here is info on thinking about lists.
+
+* So to begin with...
+
+  When starting out its good to get a mental picture of what
+  you want to do with examples.
+
+  So I created this sudo database with information about people and
+  instead of using the pre-made functions that lisp has.
+
+#+begin_src
+#+end_src
+
+  
+** First Function
+   So the first that I made was the function to make the people. A function
+   that created the list.
+
+#+begin_src lisp
+  
+  (defun make-person (name sex age location hobby)
+    (list name sex age location hobby))
+  
+#+end_src
+
+   This will be used in the creation process when you make the people element.
+
+*** Object Creation
+   
+  #+begin_src lisp
+
+    (defparameter *person-name* (make-person name sex age location hobby))
+
+  #+end_src
+
+    The *person-name* would be replaced by the actual persons name when you
+    actually create the person object. And You would have to type in all that
+    is necessary, this is not a function. 
+    In this it is necessary to put quotes around strings, but its not necessary
+    for numbers.
+  
+   
+** Next functions
+
+  The next functions fall in line with the displaying of the information that
+  you have now stored. 
+
+  Going in order of the attributes listed.
+   
+*** The sex function
+
+#+begin_src lisp
+
+  (defun person-sex (person)
+	   (if (equal (cadr person) M)
+	       (format t "~A is ~A.~%" (car person) Male)
+	       (format t "~A is ~A.~%" (car person) Female)))
+
+#+end_src
+
+  This is a little more involved than the others because we must check to
+  see if the person is male or female. Different but still very simple. 
+
+    
+*** The age function
+    
+#+begin_src lisp
+  
+  (defun person-age (person)
+	 (format t "~A is ~A years old.~%" (car person) (nth 2 person)))
+  
+#+end_src
+
+*** The location function
+
+#+begin_src lisp
+  
+  (defun person-loc (person)
+	     (format t "~A lives in ~A.~%" (car person) (nth 3 person)))
+    
+#+end_src
+    
+*** The hobby function
+
+#+begin_src lisp
+  
+  (defun person-hobby (person)
+	     (format t "~A's favorite thing to do is ~A.~%" (car person) (nth 4 person)))
+  
+#+end_src
+
+
+** Adding all the functions together in a complete output.
+
+   Now we can put all the above functions into another function that prints
+   all the attributes together for each person.
+
+   
+#+begin_src lisp
+  
+  (defun get-person (person)
+	   (format t "Here is some information about ~A.~%" (car person))
+	   (progn
+	     (person-sex person)
+	     (person-age person)
+	     (person-loc person)
+	     (person-hobby person)))
+  
+#+end_src
+
+   This prints all the information about each person in a nice form.
+
+
+CL-USER> (get-person *blake*)
+Here is some information about Blake.
+Blake is MALE.
+Blake is 34 years old.
+Blake lives in Wichita.
+Blake's favorite thing to do is Skydiving.
+NIL
+CL-USER>
+
+
+   -----------
+
+   This is cool, but what if we wanted to see all the peoples ages? We now
+   have an issue that we don't know all the people we have created. There is
+   no collection of those names. So we have to create it, add that functionality
+   into the program.
+
+   
+
+** List of People
+
+   This is one way to make a program, that is to create things and then see
+   what is necessary at each step and then make it when its necessary.
+   When I started making whatever this is, I had no overall idea of what it
+   was going to be. i did not know what was going to be needed, what issues
+   I would have, what functionality that I would need. I didn't know any of
+   this before I started.
+
+   Somethings I like to develop in this manner. Often this is the method used
+   when you don't really knw what to do. All you know is that you want this
+   to do something.
+
+   It's important to make each function independent so that when changes like
+   this arise you don't have to do a lot of reworking.
+
+   I really like that each one of these functions just takes one argument.
+   The list object. Thats it.
+
+   So we started off making lists of peoples attributes. Now we need to make a
+   list of the people that we have created.
+
+   It should be a function of the first function that we made, the make-person
+   function. One of the things that this function needs to do is add the name
+   of the peron to a list of names.
+
+   First we need to create said list. 
+   
+#+begin_src lisp
+
+  (defparameter *people* ())
+
+#+end_src
+
+  Start off by creating it as an empty list. But I guess we could have added
+  the people that we already have. blake, sally and john
+
+  So to add a name to the front of the list we do
+
+  (setf *people* (cons 'jim *people*))
+
+  So our new make-person function will look like this.
+
+#+begin_src lisp
+  
+  (defun make-person (name sex age location hobby)
+    (list name sex age location hobby))
+  
+  
+#+end_src
+
+    To do this we are probly going to need to write a macro.
+    Cause the actual creation of the person is done when you
+    run the defparameter function and so I must step outside
+    that to also add the persons name to my *people* list.
+
+    I could also maybe ask for specific attributes, instead of
+    just knowing what I need to enter, and in what order and such.
+
+    
+
+    

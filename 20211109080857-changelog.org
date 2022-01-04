@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       47062c25-39f4-4114-9fb9-4aa32f1c5c8f
+:END:
+#+title: Changelog
+#+date: [2021-11-09 Tue 08:08]
+
+This is the changelog between this computer and the server
+
+The files altered are
+HTML/CSS
+Org-mode this file has changed on my computer and on the server
+

@@ -1,0 +1,845 @@
+:PROPERTIES:
+:ID:       c179a479-ba05-49c1-b709-4827359657ac
+:END:
+#+title: Java
+
+This is the node for Java Programming Stuff
+
+
+* |###########################|
+
+* Programming Info
+     
+
+** Starting a new project in eclipse
+*** What is the project, domain and all that?
+    
+** [[id:d6b9c048-f1d4-4d01-b600-f552099d2bac][Test Driven Design]]
+*** Introduction to Testing
+**** [[https://java-programming.mooc.fi/part-6/3-introduction-to-testing][website link]]
+    
+** Connecting to GitHUb
+   [[id:3d7d920c-6a6f-4f3f-8575-7522b7873f95][Git and GitHub]]
+
+    
+** Great video that summarizes OOP
+   [[https://www.youtube.com/watch?v=CWYv7xlKydw][Link to video]]
+
+** Design Patterns in Java
+   [[https://www.decipherzone.com/blog-detail/design-patterns-java][Website]]
+
+* |###########################|
+     
+* Books
+
+** Algorithms by Robert Sedgwick
+   
+   [[id:5a6cc880-eafa-4282-97d7-a2f09beb99db][Algorithms Book Notes]]
+
+**** [[https://docs.google.com/spreadsheets/d/1USdnyCIsULrp-K6I2R5g49L72RUm5yCBwdvtMJ3PGGQ/edit#gid=1533720024][Table of Contents - Programming Study]]
+**** Book is a PDF
+**** Currently on Static Methods Pg22
+**** Setup a schedule for study
+    
+** Java Book
+*** Introduction to Programming Using java (book)
+    [[https://math.hws.edu/javanotes/index.html][website link]]
+
+*** Work through programs on the internet
+**** [[https://math.hws.edu/javanotes/index.html][Java Notes Online]]
+**** Java Library Dependencies
+***** JavaFX - GUI Applications
+**** Java Classes
+***** [[https://docs.oracle.com/javase/8/docs/api/index.html?javax/swing/AbstractAction.html][List of Java Classes]]
+      
+
+* |###########################| 
+
+* Projects 
+** German_tutorial
+*** Info about video
+**** This video focuses on TDD
+**** Everything is in a Maven Package
+*** Dependencies
+*** contains package scene creator
+**** uses hash map to hold the various elements
+**** Path to src
+**** C:\Users\Jarett\eclipse-workspace\German_tutorial\src\com\jaretty\scenecreator
+**** [[C:\Users\Jarett\eclipse-workspace\German_tutorial\src\com\jaretty\scenecreator][src dir]]
+**** 
+*** contains package coverter
+**** [[C:\Users\Jarett\eclipse-workspace\German_tutorial\src\com\jaretty\converter][src dir]]
+*** contains package for the Kid java video
+
+** GuiTest
+** GuiWindow
+** Java_youtube
+** Program1
+** Screensaver1
+*** Pulled a file from the internet and I am gonna
+    hash it out and break it down to its bare bones
+    and then rebuild it, taylored to the output
+    I want. 
+*** [[id:3f5ea8d9-5776-485a-abf8-10b65083982b][Link to src]]
+
+* |###########################|
+
+* Useful Functions
+      
+** Inputs
+
+*** string.equals("string")
+    When you are taking input and want to know if the input is equal to something
+    and if it is then you will do this:
+ #+begin_src java
+   package packagename;
+   import java.util.Scanner;
+   
+   public class Main {
+   
+       public static void main(String[] args) {
+	   Scanner input = new Scanner(System.in);
+	   String name = input.nextLine();
+   
+	   if (name.equals("Jarett")) {
+	       System.out.println("You typed Jarett");
+	       }
+	   system.out.println("You didn't type Jarett"
+       }
+   }
+ #+end_src
+
+*** |###########################|
+    
+*** Parsing an input for an integer
+    All inputs are taken as strings so if you want to work with an integer that is
+    input then you must parse the integer from the input.
+
+#+begin_src java
+  Scanner input = new Scanner(System.in); // initialize scanner
+  String inputStrg = input.nextLine();
+  int age = Integer.parseInt(inputStrg); //parse string for int
+  
+  if (age >= 13) {
+      System.out.println("You can ride!");
+  } else {
+      System.out.println("You connot ride!");
+  }
+#+end_src
+
+*** |###########################|
+    
+** Arrays
+
+*** How to setup arrays
+
+#+begin_src java
+  
+  package packagename;
+  
+  public class Main {
+  
+      public static void main(String[] args) {
+  
+	  String[] newArr = new String[5]; // initialize array with 5 items
+	  newArr[0] = "hello";
+	  newArr[1] = "hi";
+	  newArr[2] = "Jarett";  /// populating the array
+	  newArr[3] = "Bill";
+	  newArr[4] = "potato";
+  
+	  String x = newArr[4];
+	  System.out.println(x); // prints the 5th item in the "newArr" array
+  
+	  // other types of arrays
+  
+	  int[] nums = {2,3,54,63,7};
+  
+	  double[] nums2 = {3.45, 5.87, 6.73};
+  
+	  int y = nums[3];
+	  System.out.println(y); // prints the 4th item in the "nums" array
+  
+      }
+  }
+  
+#+end_src
+
+*** |###########################|
+
+** For Loops / Arrays
+   For loops are used in instances where you wish to loop a specific amount of times
+
+*** Print a list of numbers with a for loop/ print an array
+
+#+begin_src java
+  
+  package packagename;
+  
+  public class Main {
+  
+      public static void main(String[] args){
+  
+	  for (int i = 0; i <= 10; i++) {
+	      System.out.println(i);       // prints out numbers 0-10
+	  }
+	  for (int i = 0; i <= 10; i+=5) {
+	      System.out.println(i);       // prints out numbers 0,5,10
+	  }
+	  int[] arr = {1,5,7,3,6,12,40}; // initialized array
+  
+	  for (int i = 0; i < arr.length; i++) {
+	      System.out.println(arr[i]);  // prints the values in the array
+  
+	      if (arr[i] == 5) {
+		  System.out.println("Found a 5!");   // prints only when it finds a 5
+	      }
+	  }
+      }
+  }
+#+end_src
+
+*** |###########################|
+
+*** Easier way to print out elements in an array
+
+#+begin_src java
+  public static void main(String[] args){
+  
+      int[] arr = {4,5,3,7,21,44};
+      String[] names = new String[5];
+  
+      for (int element:arr) { //assigns each item in the array to "element" variable
+	  System.out.println(element);  // prints the values in the array
+      }
+  
+      int count = 0;
+      for (int element:arr) {
+	  System.out.println(element + " " + count); // print value and index
+	  count++;
+      }
+  }
+  
+#+end_src
+
+*** |###########################|
+
+*** Build an Array through inputs
+
+#+begin_src java
+  
+    public static void main(String[] args){
+  
+	int[] arr = {4,5,3,7,21,44};
+	String[] names = new String[5];  // Array length of 5
+	Scanner input = new Scanner(System.in);
+  
+	for (int i = 0; i > names.length; i++) {
+  
+	    System.out.print("Input: ");  // ask for input, user will type name, 
+	    String strInput = input.nextLine();  // continues to ask for input until end of array is hit.
+	    if (strInput.equals("quit")) {     // if user types "quit" before the end of the array
+		break;                      //the loop will break and "quit" will not be added to array.
+	    }
+	    names[i] = strInput;  // puts the input into the array
+	}
+  
+	for (String n:names) {
+	    System.out.println(n);  // then prints out items in array
+	}
+  }
+  
+#+end_src
+
+*** |###########################|
+
+** While Loops
+   While loops are used when you dont know how many times you will be looping
+   
+*** Keep looping until they type the number 10
+
+ #+begin_src java
+   
+   package packagename;
+   import java.util.Scanner;
+   
+   public class Main {
+   
+       public static void main(String[] args) {
+   
+	   Scanner input = new Scanner(System.in); // creating a scanner object
+	   System.out.print("Type a number: ");
+	   int x = input.nextInt();
+   
+	   int count = 0;
+	   while (x != 10) {    /// keeps looping until user types 10
+	      System.out.print("Type 10... ");
+	      System.out.print("Type a number: ");
+	      x = input.nextInt();
+	      count++;     // increments count each time.
+	   }
+	   System.out.println("You typed 10!");
+	   System.out.println("It took you " + count + " tries.");
+       }
+   }
+   
+ #+end_src
+*** |###########################|
+    
+*** More condensed version with a "Do While Loop"
+#+begin_src java
+  
+  public static void main(String[] args){
+  
+      Scanner input = new Scanner(System.in);
+      int x;
+  
+      do {
+	 System.out.print("Type a number: ");
+	 x = input.nextInt();
+      } while (x != 10);
+  }
+  
+#+end_src
+
+*** |###########################|
+
+** Sets and Lists
+   Sets and lists are pretty complicated so we need to research them more.
+   Here is a quick introduction.
+   With Sets and lists you dont have to specify how big they are before hand.
+   They just take inputs and grow or shrink accordingly.
+
+*** Sets
+    A set is a collection of unordered objects that are UNIQUE.
+    It cannot contain the same element twice and it doesn't know where it exists.
+    If you try to add the same element to the set it doesnt care and skips it.
+    Sets are very fast.
+
+**** HashSet
+
+#+begin_src java
+  
+  package packagename;
+  import java.util.HashSet;
+  import java.util.Set;
+  
+  public class Main {
+  
+      public static void main(String[] args) {
+  
+	  Set<Integer> t = new HashSet<Integer>(); // creating a HashSet object
+	  t.add(5);
+	  t.add(7);
+	  t.add(13);  /// adding integers to set
+	  t.add(45);
+  
+	  t.contains(13); // will return a boolean
+  
+	  t.remove(7); // removes "7" from set
+  
+	  t.clear(); // clears the entire set
+	  t.isEmpty(); // returns a boolean
+	  t.size(); // gives you the length of the set
+  
+  
+      }
+  }
+  
+#+end_src
+
+**** TreeSet
+     Similar to HashSet where you can only have unique elements.
+     However Now the elements are ordered in a tree data structure
+
+**** Linked HashSet
+     Linked HashSets are similar to HashSets but faster with certain operations.
+*** |###########################|        
+     
+*** Lists
+    An ArrayList is similar to a regualar array but it is slower, but
+    it will grow and shrink as needed.
+    Items are indexed. Items do not need to be unique. 
+    Similar functions to "Sets" with a few different ones.
+
+**** ArrayList
+    
+#+begin_src java
+  
+  package packagename;
+  import java.util.ArrayList;
+  
+  public class Main {
+  
+      public static void main(String[] args) {
+  
+	  ArrayList<Integer> t = new ArrayList<Integer>();
+	  t.add(1); // added at index 0
+	  t.add(2); // added at index 1
+	  t.get(0);
+	  t.set(1, 5) // (index, value) Changes value at index
+	      // To be able to set, there already has to be something
+	      // at that index
+	  t.subList(1, 3); // gets values from index 1 to index 3, [not including 3]
+  
+  
+  
+      }
+  }
+  
+#+end_src
+
+**** LinkedList
+     Similar to ArrayLists but faster. Somthing else to be researched
+
+*** |###########################|
+
+    
+** Maps and HashMaps
+   Left off video [[https://www.youtube.com/watch?v=GoXwIVyNvX0&t=7613s][here]]
+
+   
+
+* |###########################|   
+
+* Questions
+
+** what are the things that I will need to remember?
+
+** What information will be needed when writing code?
+
+** There needs to be a place where all the projects are listed out
+
+** Especially the work paths of the packages and then the associated dependencies. 
+
+** I need to have quick links to a syntax file that could be then searched.
+
+** 
+
+* |###########################|
+      
+
+* Trying to get lsp-java installed
+  No luck keep getting errors I wil try again maybe on the linux server
+  All the things I have read people are doing it in linux and not in windows
+  
+*** Setting up Emacs for Java Development
+    [[http://www.goldsborough.me/emacs,/java/2016/02/24/22-54-16-setting_up_emacs_for_java_development/][website link]]
+
+*** What we may need is Lsp-Java
+    [[https://github.com/emacs-lsp/lsp-java][website link]]
+
+*** 
+
+
+* |###########################|
+      
+
+* The Various Java Classes
+  [[https://docs.oracle.com/javase/8/docs/api/index.html][website link]]
+
+
+* |###########################|
+  
+* Information on Class Path
+
+  java -classpath  C:\Users\Jarett\eclipse-workspace\Program1\bin Multi3N1
+
+  Article on Stackoverflow
+  [[https://stackoverflow.com/questions/18093928/what-does-could-not-find-or-load-main-class-mean][website link]]
+ 
+
+* |###########################|
+
+  
+      
+* Java Static methods
+  In Java, a static method is a method that belongs to a class rather than
+  an instance of a class. A static method is not part of the objects it creates
+  but is part of a class definition. Unlike instance methods, a static method
+  is referenced by the class name and can be invoked without creating an object
+  of the class. 
+  
+
+* Java Fundamentals
+  
+|------------+-------------------+----------------------------------------------+---+---|
+| *      1   |                   |                                              |   |   |
+| *    1 1   |                   |                                              |   |   |
+| *      1   |                   |                                              |   |   |
+| *      1   |                   |                                              |   |   |
+| *    11111 | Java Fundamentals | Main Outline                         Section | 1 | 1 |
+|------------+-------------------+----------------------------------------------+---+---|
+
+Information from [[https://beginnersbook.com/java-tutorial-for-beginners-with-examples/][this website]]
+
+  Info about Variables, datatypes, syntax & compilaton and execution
+
+** Compilation and execution
+   When you compile all the source code in the source, the compiler produces
+   one .class file for each .java file. The .class contains the compiled version of the .java file.
+
+   To compile all the classes within your project you will run the code below:
+   
+   "c:\Program Files\Java\jdk1.8.0_25\bin\javac" src/myfirstapp/*.java -d classes
+
+   The first part is the java compiler, the second part is the folder which contains
+   your src directory. The *.java tell the compiler to compile all the files.
+   The -d creates a classes directory.
+
+   Once the compiler is done the classes directory will contain all the compiled .class files.
+   The package structure of the src folder will be preserved in the class directory.
+   Now you can run any of the .class files which contain a main() method.
+   Running the file from the command line will look like this:
+
+    "c:\Program Files\Java\jdk1.8.0_25\bin\java" -cp classes myfirstapp.MyJavaApp
+
+    The -cp classes flag tells the JVM that all your classes are located in the dir
+    classes. This is also called the "class path".
+
+    The name of the class to run is the last argument in the above command [myfirstapp.MyJavaApp]
+    The JVM needs to know the fully qualified class name (all packages plus class name) to determine
+    where the corresponding .class file is located.
+    
+** Variables and Data Types
+
+*** Declaring a variable
+    data_type variable_name = value;
+    
+*** Types of Variables
+
+**** Local variable
+     These variables are declared inside a method of the class. Their scope is limited
+     to the method, which means that You can not change their values and or access them
+     outside of the method
+
+**** Static(or Class) Variable
+     Static variables are also known as class variables because they are associated with the
+     class and common for all the instances of class.
+     For Example: If I create three objects of a class and access this static variable, it
+     would be common for all, the changes made to the variable by one object, would reflect
+     when you access it through other objects.
+     You can also access the static variables without using the objects.
+     No other variable can be accessed like that. 
+
+**** Instance Variable
+     Each Instance(object) of a class has its own copy of instance variables.
+     Unlike static variables, instance variables have their own unique copy of
+     the instance variable. 
+
+*** Java Data Types
+
+**** Data type defines the value that a variable can take
+
+**** Various Data Types
+
+***** Primitive Data Types
+
+***** Other Data Types
+
+** Operators
+*** Types of Operators
+
+**** Basic Arithmetic Operators
+
+**** Assignment Operators
+***** num2 = num1
+***** num2 += num1
+      adds the numbers and assigns the value to num2
+***** num2 /= num1
+      divides the numbers and assigns the value to num2
+***** 
+
+**** Auto-Increment/decrement Operators
+***** num2 ++
+      increments num2 by one 
+
+**** Logical Operators
+***** b1&&b2
+      'And' operator - returns true if both are true
+***** b1||b2
+      'Or' operator - returns true if one or the other are true
+***** !b1
+      'Not' operator - returns true if not b1
+
+**** Comparison (relational) operators
+***** There are six relational operators
+      ==, !=, <, >, >=, >=
+
+**** Bitwise Operators
+***** There are six bitwise operators
+      &, |, ^, ~, <<, >>
+***** Bitwise operator performs bit by bit processing 
+***** num1 | num2
+      compares corresponding bits of num1 and num2 and generates 1 if either
+      bit is 1, else returns 0
+***** num1 ^ num2
+      This compares corresponding bits of num1 and num2 and generates 1
+      if they are not equal, else it returns 0 
+***** ~num1
+      This is a complement operator that just changes the bit from 1 to 0 
+***** num1 << 1
+      This is a left shift operator that moves the bits to the left,
+      discards the far left bit, and assigns the rightmost bit to 0
+      The number of bits is determined by the number on the right side of
+      the operaotor
+***** num1 >> 1
+      Same as above except moves the bit to the right
+
+**** Ternary Operators
+***** This operator evaluates a boolean expression and assigns the value based on the result
+      Syntax: variable num1 = (expression) ? value if true: value otherwise
+
+*** Operator Precedence in Java
+    This determines which operator needs to be evaluated first if an
+    expression has more than one operator. 
+
+** Statements
+   When we need to execute a set of statements based on a condition
+   then we need to use control flow statements
+
+*** If-else Statement
+
+**** The If Statement
+     The "If" statement gets executed only when the given condition is true.
+     If the condition is false then it skips the statement and continues to the
+     code after it. 
+**** Nested if statement
+     An if statement inside an if statement is called a nested if statement.
+     The first statement would execute if condition_1 is true.
+     The second Statement would only execute if both the conditionals are true.
+**** If else Statement
+     Here the statement inside the "if" statement would execute if the condition is true, and
+     the statements inside the "else" statement would execute if the condition is false. 
+**** if-else-if statement
+     This is kindof like a switch statement.
+     If-else-if statement is used when we need to check multiple conditions.
+     This statement always begins with an "if" statement and ends with an "else"
+     statement with "if-else" statements in between.
+
+     Sample Code:
+     
+ #+begin_src java
+   
+   if(condition_1 ) {
+       statement(s);
+   }
+   else if(condition_2){
+       statement(s);
+   }
+   else{
+       statement(s);
+   }
+   
+ #+end_src     
+
+     
+*** Switch-case Statement
+    Switch statements are used when we have a number of options(or choices)
+    and we may need to perform a different task for each choice.
+
+    Make sure that you include a break statement or the switch will
+    just continue on after the first choice is made.
+
+    1. Case doesnt always have to have an order, you can specify them in
+    any order based on the requirement.
+    2. Characters can also be used in a switch statement
+    3. The expression given inside switch should result in a constant value
+       otherwise it will not be valid.
+    4. Nesting of switch statements are allowed, which means you can have switch
+       inside another switch statement. However this should be avoided because
+       it make the program more complex and less readable.
+
+       Example Code:
+
+  #+begin_src java
+    
+    public class Switch1 {
+	public static void main(String args[]){
+	    int i = 2
+	    switch(i) {
+	      case 1:
+		System.out.println("Case1");
+		break;
+	      case 2:
+		System.out.println("Case2");
+		break;
+	      case 3:
+	        System.out.println("Case3");
+		break;
+	      default:
+		System.out.println("Default");
+	    }	
+	}
+    
+    }
+    
+ #+end_src
+    
+*** Java Loops
+    Loops are used to execute a set of statements repeatedly until a
+    particular condition is satisfied. 
+
+**** For Loop
+
+     Example Syntax:
+ #+begin_src java
+   for(initialization; condition; increment/decrement) {
+       statement(s);
+   }
+   
+ #+end_src
+
+     First Step: In the loop, initialization happens first and only
+     one time.
+
+     Second Step: Condition in for loop is evaluated on each itereation,
+     if the condition is true then the statements inside the for loop
+     body get executed. Once the condition returns false, the loop is exited.
+
+     Third Step: After every execution the counter that was initialized is
+     incremented or decremented
+
+     Fourth Step: The Condition is checked and if true the body statements
+     executed again. 
+
+**** While Loop
+
+**** Do-While Loop
+
+*** Java Continue Statement
+
+*** Java Break Statement
+
+  
+** Classes + Objects
+   
+   The first letter of a java class is usually capitalized.
+   
+   Classes group variables and operations together in coherent modules. A class can have fields,
+   constructors, and methods and more.
+
+   Objects are instances of classes. When you create an object that object-type is of a certain class.
+   The Class can be seen as a template(or Blueprint) telling how objects of a class will look.
+
+   Example Class
+
+#+begin_src java
+  
+  public class Car {
+  
+  }
+  
+#+end_src
+
+*** Fields
+
+    A field is a variable that belongs to a class or an object. It is a piece of data.
+    For example: a Car class could define the field brand which all Car objects would have.
+    Each car object could have a different value for the brand field.
+
+    [[http://tutorials.jenkov.com/java/fields.html][more info]]
+
+ #+begin_src java
+  
+   public class Car {
+       private string brand; //field
+  
+   }
+  
+ #+end_src
+
+   
+
+*** Constructors
+
+    Constructors are a special kind of method that is executed when an object of that class is created.
+    Constructors typically initialize the objects internal fields.
+
+    [[http://tutorials.jenkov.com/java/constructors.html][More info]]
+
+ #+begin_src java
+  
+   public class Car {
+  
+       private String brand;
+  
+       public Car(String theBrand) { //this is the constructor
+	   this.brand = theBrand;
+      }
+   }
+  
+ #+end_src 
+
+*** Methods
+   
+    Methods are groups of operations tha carry out a certain function together. They are used
+    to group operations together, that you need to be able to execute from several different places.
+
+ #+begin_src java
+  
+   public class Car {
+  
+       private String brand;
+  
+       public Car(String theBrand) {
+	   this.brand = theBrand;
+      }
+   }
+  
+ #+end_src 
+
+*** Interfaces
+
+    Interfaces are a central concept in Java.
+    An Interface describes what methods a cretain object should have available to it.
+    A class can implement an interface.
+    When a class implements an interface, the class has to implement all the methods described in the interface.
+
+    [[http://tutorials.jenkov.com/java/interfaces.html][more info]]
+
+    
+*** Packages
+
+    A package is a directory containing Java Classes and interfaces. Packages make it possible to
+    group related classes and interfaces, thus making modularization of your java code easier.
+
+    [[http://tutorials.jenkov.com/java/packages.html][more info]]
+
+    
+**** Package Naming Conventions
+
+     Java packages are always written in lower case letters.
+
+     To avoid creating packages with the same names as other public Java Packages it
+     is recommended that you start your package hierarchy with the reverse domain name
+     of your company. Imagine that your company is jarett.com. The hierarchy would run:
+     com - jarett - package name
+
+**** Importing Classes from other Java Packages
+     If a class A needs to use class B, you will need to reference class B inside class A.
+     If both the classes are inside the same package then it will look as follows:
+-----------------------
+ #+begin_src java
+     
+   public class B {
+   
+       public void doIt() {
+	   // do something...
+       }
+   }
+#+end_src
+---------------------
+#+begin_src java
+       
+  public class A {
+  
+      public static void main(String[] args){
+	  B theBObj = new B();
+  
+	  theBObj.doIt();
+      }
+  }
+ #+end_src
+--------------------- 
+

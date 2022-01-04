@@ -1,0 +1,252 @@
+:PROPERTIES:
+:ID:       dd70a096-cebc-421c-b6fe-e7dfd98302d6
+:END:
+#+title: Journal Website
+#+date: [2021-11-16 Tue 16:32]
+
+Here are notes on the journal website.
+
+* Image files
+
+* Function that creates the nodes
+
+* Function that populates the webpage
+
+* Data files
+
+** File for the journals
+
+*** Tells info on each journal
+    - Name of Journal
+    - Number of pages
+    - Date Written
+    - Indexed
+    - Scanned
+    - 
+
+** file for the pages
+
+* How to update the web folder
+
+** Copy files to the samba share
+   
+/home/bluejet/sambashare/web/website/journal_web
+
+To remove all the files in a directory, including the subfolders
+
+sudo rm -rf *
+
+then to copy the contents of the sambashare dir to the web dir,
+while you are currently in the web dir.
+
+sudo cp -r /path/to/dir * .
+
+Path to web directory
+
+/var/www/html/journal_web
+
+* Developing Categories
+
+  
+** Main Categories
+
+*** Memory
+
+**** 1.1 San-francisco
+
+***** Walking
+
+***** Parks
+
+***** Details
+
+**** 1.2 Commune
+
+***** Irving
+
+***** Cooking
+
+***** Garden
+
+***** Criticism
+
+***** Library
+
+**** 1.3 Friends
+
+***** Wichita
+
+****** brent
+
+****** Tim
+
+****** Scotty-megan
+
+****** Mark
+
+****** Travis
+
+***** San-Fran
+
+****** Irving
+
+****** Sam
+
+****** Jeanie
+
+***** Sac-town
+
+***** Burrton
+
+
+**** 1.4 Events
+
+***** Drugs
+
+***** Random-events
+
+***** Meetings
+
+***** Drives
+
+***** Arrivals
+
+***** Traveling
+
+**** 1.5 Walks
+
+
+*** Motivation
+
+**** 2.1 Forest-of-focus
+
+***** Where-2-begin
+
+***** finding-focus
+
+***** correct-mindset
+
+**** 2.2 Natural-behaviors
+
+***** Universal Laws
+
+***** what-is-genuine-lasts
+
+**** 2.3 Progress
+
+***** Patient-diligence
+
+***** working-toward-goals
+
+***** past-accomplishments
+
+*** Narrative
+    
+**** 3.1 Indifference-of-nature
+
+**** 3.2 the-world-isnot-fair
+
+*** People
+
+**** 4.1 Social-influence
+
+**** 4.2 Extreme-behavior
+
+**** 4.3 Compassion
+
+**** 4.4 Selfish-behavior
+
+**** 4.5 Effects-of-media
+
+**** 4.6 whole-vs-the-individual
+
+*** Myself
+
+**** 5.1 My-voice
+
+**** 5.2 internal-conflict
+
+**** 5.3 self-discovery
+
+*** Lessons
+
+**** 6.1 Learning-from-failure
+
+**** 6.2 time-tested-truths
+
+**** 6.3 present-truths
+
+**** 6.4 pattern-recognition
+
+*** Description
+    
+**** 7.1 Scenes
+
+**** 7.2 Objects
+
+**** 7.3 People
+
+**** 7.4 Behavior
+
+*** Journaling
+
+**** 8.1 Recording-your-thoughts
+
+**** 8.2 seeing-yourself-differently
+
+**** 8.3 record-of-events
+
+**** 8.4 outlet-of-emotion
+
+*** Book-Notes
+
+**** 9.1 Media-cultural-studies
+
+**** 9.2 Martin-luther-king
+
+**** 9.3 Niklas-luhmann
+
+***** Social-systems
+
+***** Differentiation-of-society
+
+***** Essays-on-self-reference
+
+**** 9.4 Kenneth-burke
+
+***** Grammar-of-motives
+
+***** Rhetoric-of-motives
+
+*** Dreams
+
+**** 10.1 Positive
+
+**** 10.2 Negative
+
+**** 10.3 Disorienting
+
+*** Ideas
+
+**** 11.1 Projects
+
+**** 11.2 Efficiency
+
+**** 11.3 Organizing
+
+**** 11.4 Thoughts
+
+*** Project-Notes
+
+**** 12.1 Writing
+
+**** 12.2 Programming
+
+**** 12.3 Ceramics
+
+**** 12.4 Glass
+
+**** 12.5 Painting
+
+**** 12.6 Fabric
+

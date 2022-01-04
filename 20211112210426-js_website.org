@@ -1,0 +1,334 @@
+:PROPERTIES:
+:ID:       e1e2f684-a18e-41a0-a2d2-80395dd62274
+:END:
+#+title: JS Website
+#+date: [2021-11-12 Fri 21:04]
+
+Here is notes from the Sams Teach yourself book.
+
+
+* Displaying Random Content pg491
+   
+**** HTML
+
+     #+begin_src html
+ <!DOCTYPE html>
+ <html lang="en">
+     <head>
+     <meta charset="utf-8"/>
+     <title>Javascript Website</title>
+     <meta name="viewport"
+           content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="style.css" />
+     <script src="app.js"></script>
+     </head>
+     <body>
+     <h1>JavaScript Examples</h1>
+     <p>This is HTML text.</p>
+     <script>
+     document.write('<p>This text comes from javascript.</p>');    
+     </script>
+     <p>And this is HTML text again.</p>
+     <br>
+     <br>
+     <h2>Quotable Quotes</h2>
+     <p>Following is a ramdom quotable quote. To see a new quote
+     just reload the page.</p>
+     <script>
+     getQuote();
+     </script>
+     </body>
+ </html>
+     #+end_src
+    
+**** App.js
+
+     #+begin_src javascript
+ function getQuote() {
+
+ // create the arrays
+ quotes = new Array(5);
+ sources = new Array(5);
+
+ // initialize the arrays with quotes
+ quotes[0] = "All those times I wish I was a banana and now, here I am!";
+ sources[0] = "Myself";
+
+ quotes[1] = "When I was a boy of 14, my father was so " +
+ "ignorant...but when I got to be 21, I was astonished " +
+ "at how much he had leaned in 7 years.";
+ sources[1] = "Mark Twain";
+
+ quotes[2] = "Everybody is ignorant. Only on different " +
+ "subjects.";
+ sources[2] = "Will Rogers";
+
+ quotes[3] = "They say such nice things about people at " +
+ "their funerals that it makes me sad that I'm going to " +
+ "miss mine by just a few days.";
+ sources[3] = "Garrison Keillor";
+
+ quotes[4] = "What's another name for thesaurus?";
+ sources[4] = "Steven Wright";
+
+ // get random index into the arrays
+ i = Math.floor(Math.random() * quotes.length);
+
+ // write out the quote as html
+ document.write("<p style='background-color: #ffb6c1'>\""); 
+ document.write(quotes[i] + "\"");
+ document.write("<em>- " + sources[i] + "</em>");
+ document.write("</p>");
+ }
+     #+end_src
+
+** Explanation
+   After the function getQuote() is defined, it can be called in other places
+   in the same page. With the function existing in an external file, the
+   function can be called from any page, if I want.
+
+   So first in the function we create the arrays of length 5 and assign each one
+   to a variable. Then we initializr the arrays by adding the data to them. In
+   this case the quote and the source for each array respectively.
+
+   In javascript, a line break signals the end of a command, so that is why we
+   needed to concatenate the lines of our quotes with a plus + sign.
+
+   Then the next chuck of code is where we get the random number. But to just
+   call Math.random we would get a number between 0 and 1 like for example
+   .38271 . This would not help us much in selecting a random index from the
+   arrays. So we must use some tools to get the range of number that we want.
+
+   So the first thing we do is multiply the random decimal number by the length
+   of the array. If the length of the array is 5, that means that the indexes
+   of the array will be from 0-4. And when we multiply the random decimal
+   number between 0 and .9999 by 5 we get numbers like 0.4348 , all the
+   way up to 4.8374. Therefore when we then use the function Math.floor to
+   round the result DOWN to the nearest whole number. We end up with the
+   numbers bewteen 0 and 4, exactly what we wanted.
+
+   Then we assign the output to the variable i.
+
+   Then we format or write our quotes out into HTML.
+
+   We use the document.write function. This is a function of the DOM. We use it
+   here to write HTML that the browser then renders. The way we have written this,
+   the strings as separated to clearly indicate when something needed to be
+   handled differently. For instance we needed to escape the quotation marks with a
+   backslash to indicate when they would be printed literally. Also it is clear to
+   see when the value of a variable is substituted. 
+
+
+    
+**** Style
+
+     I added a style.css file to make things look a little better. I also put the
+     stuff inside their own divs with the class attribute of frame.
+
+     #+begin_src css
+      
+       .frame {
+ display:inline-block;
+ height: 300px;
+ width: 75%;
+ background-color: rgb(153, 107, 147);
+ padding: 15px;
+ margin-bottom: 10px;
+ border-radius: 5px;
+ }
+     #+end_src
+
+    
+
+    
+** Using the DOM to make script unobtrusive
+   What I wrote above is ok but there are a few things that can be made better if
+   we take into consideration the Document Object Model.
+
+    
+*** Understanding the DOM
+    Client-side interactivity using JavaScript typically takes the form of manipulating
+    the Document Object Model in some way. The DOM is the invisible structure of all
+    documents; it is different from the HTML structure and the way you apply semantic
+    formatting. Instead it is a sort of overall framework or container.
+
+    The overall container object is called the document. Any container that you create
+    within the document to which you have given an ID can be referenced by that ID.
+
+    The DOM is the framework to refer to elements and their associated objects. To
+    learn more about the DOM, visit the World Wide Web Consortium's information
+    about the DOM at [[http:www.w3.org/DOM/][www.w3.org/DOM/]].
+    
+*** What is Unobtrusive JavaScript?
+    Unobtrusive JavaScript is an approach to writing JavaScript scripts.
+
+    There are FOUR general rules to Unobtrusive JavaScript, developed by the
+    Web Standards Project.
+    
+**** It Should Be Usable
+     JavaScript should work without being noticed by the user. Customers should
+     be able to use it without thinking about it. 
+
+**** It Should Be Easily Degradable
+     When an unobtrusive script fails, it should not generate an error message.
+     Instead, it should present the features or silently dissappear. 
+
+**** Make It Accessible
+     The page should not rely on javaScript for core functions.
+
+**** Keep It Separate From Structure and Style
+     JavaScript should be maintained as separate files from the HTML and CSS.
+
+     Many of these rules are found in the Mobile First approach to web design.
+
+     
+*** Here's how we use the DOM to make our script unobtrusive
+    The script above was written in the standard style of JavaScript. Several factors
+    prevent this script from being unobtrusive. At least it is already in two
+    separate files, thats a big first step.
+
+    The next hting to fix is we need to add an HTML element where the quote will
+    be placed.
+
+    #+begin_src html
+<blockquote id="quote">All cats are black after midnight.</blockquote>
+    #+end_src
+
+    It doesnt have to be a <blockquote>, but it is a quotation, this seems
+    like the most appropriate HTML element.
+
+    Notice that there is text inside the <blockquote> element. This makes the
+    script unobtrusive because if it can't run the script for some reason, the
+    customer still gets a quotation.
+
+    Because the <blockquote> element has an ID = quote, it can be referenced in
+    the JavaScript;
+
+    #+begin_src javascript
+    blockquote = document.getElementById("quote");
+    #+end_src
+
+    Then you simply update/change the contents of that tag with the JavaScript
+    innerHTML property:
+
+    #+begin_src javascript
+    blockquote.innerHTML = quotes[i];
+    #+end_src
+
+    This line replaces the block of code in the JavaScript file which was used
+    to print the quotations. Now we don't need all that because all the HTML
+    is already written.
+
+    Now the JavaScript is Unobtrusive.
+
+** Here is the updated source.
+
+**** index.html
+
+     #+begin_src html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+    <title>Javascript Website</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    </head>
+    <body>
+    <div class="frame">
+    <h1>JavaScript Examples</h1>
+    <p>This is HTML text.</p>
+    <script>
+    document.write('<p>This text comes from javascript.</p>');    
+    </script>
+    <p>And this is HTML text again.</p>
+    <br>
+    </div>
+    <div class="frame">
+    <br>
+    <h2>Quotable Quotes</h2>
+    <p>Following is a ramdom quotable quote. To see a new quote
+    just reload the page.</p>
+    <blockquote id="quote">All cats are black after midnight.</blockquote>
+    <p id="source">Robert A. Heinlein</p>
+    </div>
+    <script>
+    getQuote();
+    </script>
+    </body>
+</html>
+     #+end_src
+     
+**** app.js
+
+     #+begin_src javascript
+function getQuote() {
+
+// create the arrays
+quotes = new Array(5);
+sources = new Array(5);
+
+// get the elements to write by their ID
+blockquote = document.getElementById("quote");
+source = document.getElementById("source");
+
+// initialize the arrays with quotes
+quotes[0] = "All those times I wish I was a banana and now, here I am!";
+sources[0] = "Myself";
+
+quotes[1] = "When I was a boy of 14, my father was so " +
+"ignorant...but when I got to be 21, I was astonished " +
+"at how much he had leaned in 7 years.";
+sources[1] = "Mark Twain";
+
+quotes[2] = "Everybody is ignorant. Only on different " +
+"subjects.";
+sources[2] = "Will Rogers";
+
+quotes[3] = "They say such nice things about people at " +
+"their funerals that it makes me sad that I'm going to " +
+"miss mine by just a few days.";
+sources[3] = "Garrison Keillor";
+
+quotes[4] = "What's another name for thesaurus?";
+sources[4] = "Steven Wright";
+
+// get random index into the arrays
+i = Math.floor(Math.random() * quotes.length);
+
+// write out the quote to the DOM
+blockquote.innerHTML = quotes[i];
+source.innerHTML = sources[i];
+
+}
+
+     #+end_src
+    
+**** style.css
+
+     #+begin_src css
+.frame {
+display:inline-block;
+height: 300px;
+width: 75%;
+background-color: rgb(201, 224, 186);
+padding: 15px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+#quote {
+background-color: #99bbbb;
+font-weight: bold;
+}
+
+#source {
+font-style: italic;
+}
+     #+end_src
+
+
+     
+* Changing Images based on User Interaction pg498

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       e80f278a-98de-4788-b3f9-bc247133ff84
+:END:
+#+title: lisp adapt prog1
+#+date: [2021-11-30 Tue 00:17]
+
+Thoughts on adapt program - started 11/30/21
+
+So I figured out that the best way to add to lists is with this
+function:
+
+#+begin_src lisp
+  
+  	(defun add-test (param)
+	  (setq test (cons param test)))
+  
+#+end_src
+
+So now I just need to figure out what lists I want to add to and why...
+

@@ -1,0 +1,449 @@
+:PROPERTIES:
+:ID:       8c01d956-c9a5-42cf-9e8e-04d476316032
+:END:
+#+title: Central Index Dec 2021
+#+date: [2021-12-17 Fri 08:13]
+
+December 2021 Focus
+
+* Links to other Indexes
+
+[[id:c102f327-236e-4ff1-b538-09ebe67014c0][Central Index Jan 2022]]
+
+[[id:eb328297-95d3-4eed-b293-d4cb20d9eb09][Central Index Oct 2021]]
+
+* #######################
+
+* Lisp
+
+** Practical Common Lisp Book
+
+*** making a testing framework
+    Currently on page 109
+    [[~/lisp_prog/practical_lisp/Chapter9.lisp][chapter 9 file]]
+
+** Weird(Digital Art)
+
+*** Figure out how all that works
+    [[~/lisp_prog/Lisp_repos/weird/README.md][Weird Readme file]]
+    [[~/lisp_prog/Lisp_repos/weird/examples/draw.lisp][Draw Examples]]
+    [[~/lisp_prog/Lisp_repos/weird/examples/ex.lisp][Ex Examples]]
+    
+*** Process for loading the file
+    To load Weird
+    (load "~/lisp_prog/Lisp_repos/weird/weird.asd")
+    To load cl-veq
+    (load "~/lisp_prog/Lisp_repos/cl-veq/veq.asd")
+
+    to then install the wierd prog just run
+    (ql:quickload :weird)
+    
+    
+*** Files
+    [[~/lisp_prog/Lisp_repos/][Weird File Directory]]
+
+** Paul Graham Books
+
+*** On Lisp
+    
+*** ANSI Common Lisp
+    I want to go through this book first because I
+    am still learning all the functionality that lisp
+    has to offer.
+
+    [[~/lisp_prog/Ansi_Lisp/ansi_lisp_notes.lisp][ANSI Lisp notes file]]
+
+** Person database
+   [[~/lisp_prog/Person_DB/person1.lisp][Person Database File]]
+   [[~/lisp_prog/
+
+*** Changes that you want to make
+
+**** Querys
+     Setup querys for:
+     - Name / Address
+     - Name / Phone Number
+     - Show only the uniqueness of each entry
+     - Show entries from specific states
+
+**** Setup Global parameters
+     These are things like when you go to save the DB, instead
+     of having to type the filename, it is hardcoded into the
+     program. That along with the 
+
+**** 
+
+*** What are some other uses for this type of program?
+
+**** Book Catalog
+     Add a catagory chooser to the functionality. 
+
+**** Phone Book
+
+**** Types of Book binding
+
+**** Youtube Links
+     Have categories for this one 
+
+**** Can I setup a Database for Journal Entries
+     Use this ta categorize journal entries?
+
+     
+***** What elements would be included?
+      Journal Name
+      page number
+      Entry number
+      Category (list of lists)
+        main
+	sub1
+	sub2
+	sub3
+
+      Quick idea
+
+      that should be all you need.
+      
+      
+** How do you search a list?
+   Iterate through the list
+   Ask if the iteration is a list.
+   Compare the iteration to what you are looking for.
+   If the iteration is a list, rerun thge function on it.
+   Stop when the end of the list is reached, which is done automatically
+   in lisp. Function (cdr list)
+
+   Output a number 5.3.5.1 that will tell you exactly where the term was found.
+
+   Every position in the list has a number, or location.
+
+   show-categories function()
+   return-results funtion()
+
+   Write a query, learn how to return a query. 
+   
+
+* ###########################
+
+* GitHub Verson Control
+  
+** I need to make the whole git flow a habit within my work flow.
+   To do this I need to setup, or establish within my mind a logical
+   process that I will go through for each and every project. This
+   doesn't happen only at the beginning but it is a perpetual thing
+   throughout the life of the project, all projects. 
+
+** Get Everything Up-to-date With Github
+   So I need to create separate folders for all my programming
+   projects and then make repositories for those directories.
+
+   Focus on the repository
+   Let that be what guides you.
+
+   Create a master branch that will start off just having the
+   README in it. Then create a develop branch and use the develop
+   branch until you have something that works and then merge that
+   with the master branch.
+
+   Then if you want to add something create a feature branch and then
+   merge that with the develop branch if adn when it works ok.
+   
+   this is your git flow.
+
+** Start a repository for your org-roam files
+   Start a repository for your org-roam files and use it to keep all the
+   devices up-to-date with the org-roam stuff.
+
+   then if you make changes on another machine you can just do a pull request
+
+   It'd be nice to have an updated init.el file aswell that I can load into
+   other devices.
+   
+
+   
+** Start a repository for templates and Bootstrap Stuff
+   This is so you always have a place to go to get
+   commonly used code in any language.
+
+   You can have Indesign templates there
+   Photoshop templates
+   Illustrator templates
+
+   Like one of the things will be a database bootstrap in LISP
+   
+
+** Git Commands to know
+   [[id:3d7d920c-6a6f-4f3f-8575-7522b7873f95][Git and GitHub]]
+
+** Steps of the Process
+
+*** This process is if you create the repo before the project
+    
+**** Step 1
+     Create the repo on GitHub
+     
+**** Step 2
+     Inside the dir with all the projects in it,
+     clone the repo on to your computer.
+
+     % git clone <link>
+
+     Now the repos are the same and you can add files, commit changes
+     and then push them without any issues. 
+
+     
+
+*** This process is if you have already created the peoject
+
+**** Step 1
+     Create repository on GitHUb
+
+     This will also create a README.md which you need a template
+     that you can use for these. This is a detailed description
+     of your project. 
+
+**** Step 2
+     Open GitBash and CD to the dir of the project
+    
+**** Step 3
+     Run
+     % git init
+
+     This will initialize the directory as a git repository
+
+**** Step 4
+     Run
+     % git add .
+
+     This will add all the files in the directory to the repository
+
+     Run
+     % git status
+
+     This will tell you the status of the files in the directory
+    
+**** Step 5
+
+     Run
+     % git commit -m "Added some files" -m "Other comments"
+    
+**** Step 6
+
+     Run
+     % git remote add origin <link>
+
+     This will link the remote repository to the directory on your computer.
+
+    
+**** Step 7
+
+     Then you must do a pull request to get the files on the online repo.
+    
+     Run
+     % git pull origin master --allow-unrelated-histories
+
+     This is run otherwise you will get an error
+
+    
+**** Step 8
+
+     Now the local repo will have the files on the remote and so you
+     are able to push the local files up to the remote repo.
+
+     Run
+     % git push origin master
+
+     This will get all the files up to the remote repo and you will be
+     done. 
+
+** Working With Branches
+   
+*** To create a new branch
+
+    Run
+    % git checkout -b <branchname>
+
+* ##############################
+
+* Journal Web
+
+** Current Progress
+   
+   |------+---------------------------+----------+-------|
+   | Done | Journal Name              | Date     | Pages |
+   |------+---------------------------+----------+-------|
+   | x    | The Muted Pen             | 11/5/07  |    88 |
+   | x    | The Spring Journal        | 1/9/08   |    89 |
+   | x    | The Grey Journal          | 4/14/08  |    92 |
+   | x    | Ginko Journal             | 10/20/08 |    61 |
+   | x    | Litchfield Journal        | 1/1/09   |   111 |
+   | x    | Bicycle Sculpture Journal | 2/1/10   |   114 |
+   | x    | Owl Journal               | 7/28/11  |   119 |
+   | x    | Fantastique Journal       | 10/29/09 |   173 |
+   | x    | Tree Journal              | 1/25/11  |    62 |
+   | x    | Green Journal             | 8/1/12   |   121 |
+   | x    | Snowprints Journal        | 7/1/10   |    63 |
+   | x    | Jacobs Journal            | 6/7/09   |    98 |
+   | x    | Labyrinth Journal         | 10/20/11 |   116 |
+   | x    | Faded Colors Journal      | 5/17/11  |    45 |
+   | x    | Liberated Fist Journal    | 6/2/12   |   116 |
+   | x    | Energy Journal            | 10/3/12  |   118 |
+   | x    | Black Journal             | 12/15/11 |   193 |
+   | x    | Red Journal               | 2/25/12  |   105 |
+   | x    | Paper Weight Journal      | 10/21/10 |    59 |
+   | x    | Canvas 2 Journal          | 9/24/13  |   238 |
+   | x    | Classical Journal         | 2/8/16   |   213 |
+   | x    | Book of Details           | 5/20/14  |   211 |
+   | x    | Canvas 1 Journal          | 1/6/13   |   292 |
+   | x    | Fractal Journal           | 1/3/17   |   169 |
+   | x    | Stamp Journal             | 6/26/15  |   213 |
+   | x    | ESB Journal               | 7/7/09   |    62 |
+   | x    | Bamboo Journal            | 9/15/15  |   221 |
+   | x    | Black Star Journal        | 3/17/15  |   147 |
+   |      | Blue Ribbon Journal       | 9/12/12  |    51 |
+   |      | Blue Journal              | 11/8/10  |   173 |
+   |      | Sensored Journal          | 7/4/08   |    64 |
+   |      | Seven Journal             | 10/26/17 |   301 |
+   |      | Caduveo Journal           | 11/8/19  |   113 |
+   |      |                           |          |       |
+   |------+---------------------------+----------+-------|
+
+
+   
+** Steps in the Process
+    
+*** Make the New Directory
+    Copy from temp dir and rename to correct name
+
+*** Get the Google docs Index page
+    Go to the google docs index page for that journal and make
+    sure that it is properly formatted
+
+*** Copy the text into the coreect javascript file. 
+
+*** Use the Python Script to create the JSON object within the file
+
+*** Copy the necessary elements from the old javascript file
+    Then change the names of the variables with in the file to match the
+    name of the current journal
+
+*** Rename the main webpage for the journal.
+    Go into the page and change all the names to reflect the current journal.
+    Edit the number of links to match the number necessary for the number of
+    pages included in the present journal.
+
+    Make sure the page is all ready to go before you copy it. 
+    
+*** Copy the main page into all the linked pages necessary
+    
+*** Process the Images in lightroom
+    Export the odd pages first, then run the script to change the file names
+    Copy them into the images directory
+    Export the even pages, then run the script to change the file names
+    Copy them in to the image directory
+
+*** Make sure the right cover image is in the directory
+
+*** Add the link to the Index page for the website
+
+
+
+** Journal Summaries
+       
+*** Muted pen journal summary
+
+    This is the first journal that I made when I was in San Francisco.
+    A the time, under the instruction of Irving, I was thinking about
+    what it takes to be a writer. At the time I was in awe of this place
+    in which I was dwelling. I worshipped the people there.
+    The writings in this book reflect that and other stuff I was
+    contemplating at the time. Because I was trying to prepare myself to
+    be a writer, I was brainstorming the details of various settings. Like
+    the ocean, the desert, the moutainside.
+    I also struggled with how to say what I wanted to say. I talk about the
+    feeling of being deserted by everyone. I wished there was a book that
+    was passed down from one generation to the next that told you what you
+    should do. Self-Discovery. The opposite of commitment. Later I realized
+    that I just didn't want to become one of them. That in itself is a lot to
+    ask from an individual. Those who haven't found themselves maybe would
+    have had an easier time fitting in. I knew I was somehting different.
+
+    pg35 - What events have shaped me as a person?
+
+    pg49 - Forget about the WHY, concentrate on the WHAT.
+    It seems easier to distinguish the why, for some reason. 
+
+
+    
+** Categories
+
+   I will make a lisp file that holds all the variables for the categories
+
+   
+
+
+* #############################
+  
+* Job Getting Process
+  
+** Setup a linkedin account
+
+** Create your resume
+
+*** what format should it be in?
+
+*** google docs
+
+
+* Learn React
+   
+*** React Study resources
+
+    [[id:d3146f27-bac4-4a06-913f-1838c5d7c511][React Development]]
+
+* Write a script for git pushes
+
+*** Bash Script
+
+* Train on Codewars
+
+* #############################
+  
+* Swift
+
+** I need to continue to go thru the 100 days of Swift videos.
+   Currently I am on 
+   
+
+* #############################
+   
+* Bash Scripting and Powershell Scripting 
+
+** Bash Scriping
+
+   [[id:cbda692f-3ca5-4117-afdb-68cbbfce1f2e][Bash Scripting]]
+
+** Powershell Scripting
+
+   [[id:c6dcf1a0-538f-4677-b036-2e83475c91d7][Powershell Scripting]]
+
+* #############################
+  
+* Setup a dual boot on the other Yoga
+  
+** Install linux and grow with it.
+   
+** How do we do a dual boot?
+   [[https://opensource.com/article/18/5/dual-boot-linux][Dual boot linux windows]]
+
+   
+** Maybe Just boot linux in windows
+
+   
+* #############################
+
+* Printing from the command line in windows
+
+  Get-Content -Path C:\home\org_roam_files\20211226223739-thoughts_12_26_21.org | Out-Printer
+
+** Get better at powershell
+

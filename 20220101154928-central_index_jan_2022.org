@@ -1,0 +1,191 @@
+:PROPERTIES:
+:ID:       c102f327-236e-4ff1-b538-09ebe67014c0
+:END:
+#+title: Central Index Jan 2022
+#+date: [2022-01-01 Sat 15:49]
+
+Januaray 2022 Focus
+
+* Links to other Indexes
+
+  [[id:8c01d956-c9a5-42cf-9e8e-04d476316032][Central Index Dec 2021]]
+
+
+* #######################
+
+* Few things to get finished 
+
+** Journal Website
+
+   
+* #######################
+
+* Lisp
+
+** Practical Common Lisp Book
+
+*** making a testing framework
+    Currently on page 109
+    [[~/lisp_prog/practical_lisp/Chapter9.lisp][chapter 9 file]]
+
+** Database for Journal Entries
+   Use the database, modify it to work with adding
+   journal entries. 
+
+** Weird(Digital Art)
+
+*** Figure out how all that works
+    [[~/lisp_prog/Lisp_repos/weird/README.md][Weird Readme file]]
+    [[~/lisp_prog/Lisp_repos/weird/examples/draw.lisp][Draw Examples]]
+    [[~/lisp_prog/Lisp_repos/weird/examples/ex.lisp][Ex Examples]]
+    
+*** Process for loading the file
+    To load Weird
+    (load "~/lisp_prog/Lisp_repos/weird/weird.asd")
+    To load cl-veq
+    (load "~/lisp_prog/Lisp_repos/cl-veq/veq.asd")
+
+    to then install the wierd prog just run
+    (ql:quickload :weird)
+    
+    
+*** Files
+    [[~/lisp_prog/Lisp_repos/][Weird File Directory]]
+
+** Paul Graham Books
+
+*** On Lisp
+    
+*** ANSI Common Lisp
+    I want to go through this book first because I
+    am still learning all the functionality that lisp
+    has to offer.
+
+    [[~/lisp_prog/Ansi_Lisp/ansi_lisp_notes.lisp][ANSI Lisp notes file]]
+
+** Person database
+   [[~/lisp_prog/Person_DB/person1.lisp][Person Database File]]
+   [[~/lisp_prog/
+
+*** Changes that you want to make
+
+**** Querys
+     Setup querys for:
+     - Name / Address
+     - Name / Phone Number
+     - Show only the uniqueness of each entry
+     - Show entries from specific states
+
+**** Setup Global parameters
+     These are things like when you go to save the DB, instead
+     of having to type the filename, it is hardcoded into the
+     program. That along with the 
+
+**** 
+
+*** What are some other uses for this type of program?
+
+**** Book Catalog
+     Add a catagory chooser to the functionality. 
+
+**** Phone Book
+
+**** Types of Book binding
+
+**** Youtube Links
+     Have categories for this one 
+
+**** Can I setup a Database for Journal Entries
+     Use this ta categorize journal entries?
+
+     
+***** What elements would be included?
+      Journal Name
+      page number
+      Entry number
+      Category (list of lists)
+        main
+	sub1
+	sub2
+	sub3
+
+      Quick idea
+
+      that should be all you need.
+      
+      
+** How do you search a list?
+   Iterate through the list
+   Ask if the iteration is a list.
+   Compare the iteration to what you are looking for.
+   If the iteration is a list, rerun thge function on it.
+   Stop when the end of the list is reached, which is done automatically
+   in lisp. Function (cdr list)
+
+   Output a number 5.3.5.1 that will tell you exactly where the term was found.
+
+   Every position in the list has a number, or location.
+
+   show-categories function()
+   return-results funtion()
+
+   Write a query, learn how to return a query. 
+   
+
+* #######################
+
+* Bash / Powershell Scripting
+
+** Bash Scriping
+
+   [[id:cbda692f-3ca5-4117-afdb-68cbbfce1f2e][Bash Scripting]]
+
+** Powershell Scripting
+
+   [[id:c6dcf1a0-538f-4677-b036-2e83475c91d7][Powershell Scripting]]
+
+
+* #######################
+
+* Job Getting Process
+  
+** Setup a linkedin account
+
+** Chat with people on Slack
+
+** Create your resume
+
+*** what format should it be in?
+
+*** google docs
+
+
+* #######################
+
+* Java Script
+
+** Learning Java Script
+
+   [[id:c7c0bf05-e15e-49f5-a5df-fd7a77623746][Java Script]]
+
+   [[id:e1e2f684-a18e-41a0-a2d2-80395dd62274][JS Website]]
+
+   [[id:682e905e-f967-473b-a603-62dc75340f20][JS Oreilly book study]]
+
+** Learning React
+
+   [[id:97fdccd8-12c8-4ee9-9f95-adb28067d129][JS React]]
+
+* #######################
+
+* General Learning
+  
+** Train on Codewars
+
+* #######################
+
+* Swift
+
+* #######################
+
+* 

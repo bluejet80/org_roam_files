@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       68e400fd-c973-4723-8934-f8cfa47bc1ab
 :END:
@@ -6,12 +5,3 @@
 
 This is the place for writings
 
-=======
-:PROPERTIES:
-:ID:       68e400fd-c973-4723-8934-f8cfa47bc1ab
-:END:
-#+title: Writing
-
-This is the place for writings
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

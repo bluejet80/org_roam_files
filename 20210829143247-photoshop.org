@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       55ef118a-9c26-4808-af2c-3764ffd11fcc
 :END:
@@ -7,13 +6,3 @@
 This is the place for everything Photoshop Related
 
 
-=======
-:PROPERTIES:
-:ID:       55ef118a-9c26-4808-af2c-3764ffd11fcc
-:END:
-#+title: Photoshop
-
-This is the place for everything Photoshop Related
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

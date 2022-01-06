@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       49164121-9371-455b-9eb1-a5dc8c9c486e
 :END:
@@ -7,13 +6,3 @@
 This is the place for everything related to Woodworking
 
 
-=======
-:PROPERTIES:
-:ID:       49164121-9371-455b-9eb1-a5dc8c9c486e
-:END:
-#+title: Woodworking
-
-This is the place for everything related to Woodworking
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

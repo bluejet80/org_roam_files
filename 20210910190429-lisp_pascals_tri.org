@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       e2bc5614-330f-4ad9-ad70-f0763d8fa290
 :END:
@@ -10,16 +9,3 @@
     (loop
       (setq 
 #+end_src
-=======
-:PROPERTIES:
-:ID:       e2bc5614-330f-4ad9-ad70-f0763d8fa290
-:END:
-#+title: lisp pascals tri
-#+date: [2021-09-10 Fri 19:04]
-
-#+begin_src lisp
-  (defun pascal (n)
-    (loop
-      (setq 
-#+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       056cc91d-9165-4019-8634-70dde747b1a8
 :END:
@@ -7,13 +6,3 @@
 This is the place to specify tags to organize things
 
 
-=======
-:PROPERTIES:
-:ID:       056cc91d-9165-4019-8634-70dde747b1a8
-:END:
-#+title: Tags
-
-This is the place to specify tags to organize things
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

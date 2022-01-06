@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       df499226-a25c-438d-ae7a-9cbf1c7107cf
 :END:
@@ -6,12 +5,3 @@
 
 This is for stuff about books
 
-=======
-:PROPERTIES:
-:ID:       df499226-a25c-438d-ae7a-9cbf1c7107cf
-:END:
-#+title: Books
-
-This is for stuff about books
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

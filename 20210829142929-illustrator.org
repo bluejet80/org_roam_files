@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       c82b370b-fc5c-4173-85b7-a825a7819ada
 :END:
@@ -7,13 +6,3 @@
 This is the place for everything Illustrator Related
 
 
-=======
-:PROPERTIES:
-:ID:       c82b370b-fc5c-4173-85b7-a825a7819ada
-:END:
-#+title: Illustrator
-
-This is the place for everything Illustrator Related
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

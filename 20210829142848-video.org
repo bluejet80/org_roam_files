@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       f6d91565-6226-4a1b-b471-df75a4c95a2f
 :END:
@@ -7,13 +6,3 @@
 This is the pace for everything Video related
 
 
-=======
-:PROPERTIES:
-:ID:       f6d91565-6226-4a1b-b471-df75a4c95a2f
-:END:
-#+title: Video
-
-This is the pace for everything Video related
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

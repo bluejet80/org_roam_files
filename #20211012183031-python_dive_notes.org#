@@ -154,23 +154,6 @@ Setup a directory:
 
    To access the approximate_size() function in the console we would type:
    
-<<<<<<< HEAD
-   >>> import humansize
-
-   >>> print(humansize.approximate_size(4096, True))
-   4.0 KiB
-
-   >>> print(humansize.approximate_size.__doc__)
-
-    Convert a file size to human-readable form.
-    
-    Keyword arguments:
-    size -- file size in bytes
-    a_kilobyte_is_1024_bytes -- if True (default), use multiples of 1024
-                                if False, use multiples of 1000
-                                
-    Returns: string
-=======
 #+begin_src python
   
   >>> import humansize
@@ -190,7 +173,6 @@ Setup a directory:
    Returns: string
   
 #+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
 
    
     The first line imports the humansize program as a module, a chunck of code
@@ -302,11 +284,8 @@ Setup a directory:
    continue on gracefully if the user hasn't installed it. You could do this
    with a try....except block.
 
-<<<<<<< HEAD
-=======
  #+begin_src python
 
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
    try:
      import chardet
    except ImportError:
@@ -320,11 +299,8 @@ Setup a directory:
    else:
      # continue anyway
 
-<<<<<<< HEAD
-=======
 #+end_src
 
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
    Another common use of the ImportError exception is when two modules implement
    a common application programming interface (API), but one is more desirable
    than the other. (Maybe it's faster or uses less memory) You can try to import
@@ -354,21 +330,15 @@ Setup a directory:
    A modules __name__ depends on how you're using the module. If you import
    the module, __name__ is the module's file name without a directory path or
    file extension.
-<<<<<<< HEAD
-=======
    
 #+begin_src python
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
 
    >>> import humansize
    >>> humansize.__name__
    'humansize'
 
-<<<<<<< HEAD
-=======
 #+end_src
 
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
    
    But you can also run the module directly as a standalone program, in which
    case __name__ will be a special default vaule: __main__. Python will
@@ -382,29 +352,6 @@ Setup a directory:
    
 * Chapter 2 Native DataTypes pg 15
 
-<<<<<<< HEAD
-  Native Data types are:
-  Booleans
-  Numbers
-  Strings
-  Bytes and byte arrays
-  Lists
-  Tuples
-  Sets
-  Dictionaries
-
-** Booleans
-   Booleans can be treated as numbers.
-   True = 1
-   False = 0
-
-   True + True = 2 (True must begin with a capital letter)
-   15 - True = 14
-   
-
-** Numbers
-
-=======
 *** Native Data types are:
 **** Booleans
 **** Numbers
@@ -429,41 +376,12 @@ Setup a directory:
 ** Numbers
    
 #+begin_src python
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
    type(1) - tells you the type of 1
 
    isinstance(1, int) - returns true or false if 1 is an integer
 
    float(2) = 2.0
    int(2.5) = 2
-<<<<<<< HEAD
-
-   When dividing numbers
-
-   11 / 2 = 5.5
-   11 // 2 = 5  - the answer is truncated
-
-   11 % 2 = 1 - this is the remainder operator
-
-   def divr(x,y):
-    print((x//y),"r",(x%y))  #function that prints the divisor and remainder
-
-   Other stuff
-
-   11 ** 2 = 121
-
-   To do square roots you have to import the math module
-   import math
-   math.sqrt(144) = 12
-
-   Use the math module to do trig calculations as well
-
-   Fractions
-
-   To use fractions you need to import the fractrion module
-   import fractions
-   x = fractions.Fraction(1,3) - creates 1/3 fraction
-=======
 #+end_src
 
 *** When dividing numbers
@@ -500,7 +418,6 @@ Setup a directory:
     import fractions
     x = fractions.Fraction(1,3) - creates 1/3 fraction
 #+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
 
    
 ** Lists
@@ -509,53 +426,6 @@ Setup a directory:
    To create a list use square brackets to wrap a comma-separated list
    of values.
 
-<<<<<<< HEAD
-   a_list = ['a','b','apple',7,9,True]
-   
-   As always everything in python is an object. So you can have
-   lists of objects, like functions.
-
-   a_list[3] = item at index 3 - lists begin at index 0
-
-   a-list[-3] = the third item from the end of the list
-
-*** slicing a list
-
-    a_list[1:3] = returns items from index 1 to index 2 (does not include
-    index 3)
-
-    a_list[:3] = returns from the begining to index 2
-
-    a_list[2:] = returns from index 2 to the end of the list
-
-    
-*** adding to a list
-
-    a_list = a_list + ['happy',7] # appends to the end
-    a_list = [4,5] + a_list  # appends to the front
-
-    there's also
-
-    a_list.append('good')  # appends single item to the end
-    if another list is added hre it will be a list inside the list
-
-    to index a list within a list use the nested indexes
-
-    a_list[2][1] = returns index 1 of the third item in the list.
-    
-    a_list.extend([5,6,3]) # appends to the end
-    a_list.insert(5,'yes') # appends single item to list, the first arg
-    is the index and the second is the item
-
-*** searching a list
-
-    a_list.count('new') = returns the number of times 'new' is in the list.
-
-    'new' in a_list = returns True or False if 'new' is in list
-
-    a_list.index('new') = returns the index of 'new'
-
-=======
    #+begin_src python
 
    a_list = ['a','b','apple',7,9,True]
@@ -615,19 +485,10 @@ Setup a directory:
       a_list.index('new') # returns the index of 'new'
       
 #+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
     
     
 *** Removing items from a list
 
-<<<<<<< HEAD
-    del a_list[1] = deletes what is at index 1
-
-    a_list.remove('new') = removes the first instance of 'new'
-
-    a_list.pop() = removes the last items from the list and returns the item
-    that was removed
-=======
     #+begin_src python
 
     del a_list[1]         # deletes what is at index 1
@@ -637,7 +498,6 @@ Setup a directory:
     a_list.pop()         # removes the last items from the list and returns the item
                          # that was removed
 #+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
 
     Regular lists are True
     Empty Lists are False
@@ -654,30 +514,15 @@ Setup a directory:
    Tuples can be converted in to Lists and vise versa.
    The tuple() function changes a list to a tuple
    and the list() function does the opposite
-<<<<<<< HEAD
-
-   tuple(a_list) = changes a_list to a tuple   
-
-=======
    
 #+begin_src python
    tuple(a_list)     # changes a_list to a tuple   
 #+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
    
 *** Assigning multiple values with a Tuple
 
     You can use Tuples to assign values to multiple variables
     
-<<<<<<< HEAD
-    v = ('a', 2, True)  # create a Tuple 
-    
-    (x, y, z) = v  # assign the values of the Tuple to variables
-
-    x = 'a'
-    y = 2
-    z = True
-=======
     #+begin_src python
       
       v = ('a', 2, True)  # create a Tuple 
@@ -689,7 +534,6 @@ Setup a directory:
       z = True
       
     #+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
 
   
     
@@ -715,17 +559,8 @@ Setup a directory:
 
    Getting the length of a set - len(a_set)
 
-<<<<<<< HEAD
-   
-
-** Dictionaries
-   Dictionaries are a lot like sets but they have the key : value duality
-   
-
-=======
 ** Dictionaries
    
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
    
 * Comprehension
 
@@ -733,11 +568,7 @@ Setup a directory:
    Python can access the file no matter what kind of slashes you use.
 
    Python has a way of splitting the pathname and the filename
-<<<<<<< HEAD
-
-=======
 #+begin_src python
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
    pathname = 'Users\Jarett\python3\file.txt'
 
 
@@ -748,10 +579,7 @@ Setup a directory:
    (shortname, extension) = os.path.splitext(filename)
    shortname = 'file'
    extension = '.txt'
-<<<<<<< HEAD
-=======
    #+end_src
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
 
    You can build up path names with the os.path.join() function
 
@@ -767,19 +595,12 @@ Setup a directory:
 **** Getting file METADATA
      Every modern filesystem stores metadata about each file: creation date,
      last modified date, file size, and so on...
-<<<<<<< HEAD
-
-=======
      
 #+begin_src python
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
      metadata = os.stat('file.txt')
 
      metadata.st_mtime
      1247520344.9537716
 
-<<<<<<< HEAD
-=======
 #+end_src
 
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

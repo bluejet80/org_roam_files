@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       208e65dd-3156-4980-9fac-e62d3b2a19b0
 :END:
@@ -7,13 +6,3 @@
 This is where stuff w lisp will go.
 
 
-=======
-:PROPERTIES:
-:ID:       208e65dd-3156-4980-9fac-e62d3b2a19b0
-:END:
-#+title: Common Lisp
-
-This is where stuff w lisp will go.
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       e769debd-6967-48f3-abfe-771c20e7a995
 :END:
@@ -7,13 +6,3 @@
 This is a place for historical references and such
 
 
-=======
-:PROPERTIES:
-:ID:       e769debd-6967-48f3-abfe-771c20e7a995
-:END:
-#+title: History
-
-This is a place for historical references and such
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :PROPERTIES:
 :ID:       4617240e-ea67-4b40-b6bd-14066b2ec228
 :END:
@@ -7,13 +6,3 @@
 This is the place for everything related to the Piano
 
 
-=======
-:PROPERTIES:
-:ID:       4617240e-ea67-4b40-b6bd-14066b2ec228
-:END:
-#+title: Piano
-
-This is the place for everything related to the Piano
-
-
->>>>>>> 2189245692e7e52370ca8345e7e7628bc3a123c2
